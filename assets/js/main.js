@@ -264,38 +264,74 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        const data = await response.json();
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success) {
+            formFeedback.className = 'form-feedback success';
+            formFeedback.innerHTML = `
+              <strong>Permintaan Berjaya Dihantar!</strong><br>
+              ${data.message}<br><br>
+              <a href="${data.wa_url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top: 8px;">
+                Teruskan Berbual di WhatsApp
+              </a>
+            `;
+            contactForm.reset();
 
-        if (response.ok && data.success) {
-          formFeedback.className = 'form-feedback success';
-          formFeedback.innerHTML = `
-            <strong>Permintaan Berjaya Dihantar!</strong><br>
-            ${data.message}<br><br>
-            <a href="${data.wa_url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top: 8px;">
-              Teruskan Berbual di WhatsApp
-            </a>
-          `;
-          contactForm.reset();
+            // Update CSRF token for next submission
+            if (data.new_csrf) {
+              const csrfInput = contactForm.querySelector('input[name="csrf_token"]');
+              if (csrfInput) csrfInput.value = data.new_csrf;
+            }
 
-          // Update CSRF token for next submission
-          if (data.new_csrf) {
-            const csrfInput = contactForm.querySelector('input[name="csrf_token"]');
-            if (csrfInput) csrfInput.value = data.new_csrf;
+            // Optional: automatically redirect to WhatsApp after 2 seconds
+            if (data.wa_url) {
+              setTimeout(() => {
+                window.open(data.wa_url, '_blank');
+              }, 1800);
+            }
+            return;
+          } else {
+            formFeedback.className = 'form-feedback error';
+            formFeedback.innerHTML = `<strong>Ralat:</strong> ${data.message || 'Sila semak maklumat yang dimasukkan dan cuba lagi.'}`;
+            return;
           }
-
-          // Optional: automatically redirect to WhatsApp after 2 seconds
-          if (data.wa_url) {
-            setTimeout(() => {
-              window.open(data.wa_url, '_blank');
-            }, 1800);
-          }
-        } else {
-          formFeedback.className = 'form-feedback error';
-          formFeedback.innerHTML = `<strong>Ralat:</strong> ${data.message || 'Sila semak maklumat yang dimasukkan dan cuba lagi.'}`;
         }
+        throw new Error('Static host or server error');
       } catch (err) {
-        formFeedback.className = 'form-feedback error';
-        formFeedback.innerHTML = '<strong>Ralat Sambungan:</strong> Tidak dapat menghubungi pelayan. Sila cuba lagi atau hubungi kami terus melalui WhatsApp.';
+        // Fallback for static environments (GitHub Pages): open WhatsApp directly with prefilled parameters
+        const name = contactForm.querySelector('[name="name"]')?.value || '';
+        const company = contactForm.querySelector('[name="company"]')?.value || '';
+        const phone = contactForm.querySelector('[name="phone"]')?.value || '';
+        const industry = contactForm.querySelector('[name="industry"]')?.value || '';
+        const budget = contactForm.querySelector('[name="budget"]')?.value || '';
+        const objectives = contactForm.querySelector('[name="objectives"]')?.value || '';
+        const userMsg = contactForm.querySelector('[name="message"]')?.value || '';
+
+        const lines = [
+          'Salam REVO LUX MEDIA,',
+          'Saya berminat membuat tempahan/pertanyaan pengiklanan Alphard & Vellfire:',
+          `- Nama: ${name}`,
+          `- Syarikat: ${company || '-'}`,
+          `- Telefon: ${phone}`,
+          `- Industri: ${industry || '-'}`,
+          `- Anggaran Bajet: ${budget || '-'}`,
+          `- Objektif: ${objectives || '-'}`
+        ];
+        if (userMsg) lines.push(`- Mesej Tambahan: ${userMsg}`);
+
+        const fallbackWaUrl = 'https://wa.me/601111886654?text=' + encodeURIComponent(lines.join('\n'));
+
+        formFeedback.className = 'form-feedback success';
+        formFeedback.innerHTML = `
+          <strong>Pertanyaan Telah Dirumuskan!</strong><br>
+          Menyambungkan anda terus ke perunding media REVO di WhatsApp...<br><br>
+          <a href="${fallbackWaUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top: 8px;">
+            Buka WhatsApp Sekarang
+          </a>
+        `;
+        setTimeout(() => {
+          window.open(fallbackWaUrl, '_blank');
+        }, 1200);
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;

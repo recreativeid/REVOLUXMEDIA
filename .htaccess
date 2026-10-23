@@ -1,7 +1,8 @@
 # REVO LUX MEDIA - Apache Hardened Configuration
 # Protection against CVE-2024-4577 (PHP-CGI Windows Argument Injection) & Web Attacks
 
-# 1. Disable Directory Browsing
+# 1. Directory Indexing & Prioritization (Prioritizes PHP for cPanel, falls back to HTML)
+DirectoryIndex index.php index.html
 Options -Indexes -MultiViews
 
 # 2. Block access to sensitive and data files
