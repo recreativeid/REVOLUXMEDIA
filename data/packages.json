@@ -1,0 +1,44 @@
+[
+    {
+        "id": "starter",
+        "code": "PACKAGE 01",
+        "name": "BRAND STARTER",
+        "tag": "Eksplorasi Awal",
+        "description": "Sesuai untuk perniagaan yang baru ingin meneroka medium pengiklanan mudah alih premium.",
+        "suitable_format": "Format Iklan: Tertakluk kepada ketersediaan slot (video ringkas / paparan visual digital beresolusi tinggi)",
+        "coverage": "Liputan Kenderaan: Armada terpilih Alphard & Vellfire di kawasan tumpuan Lembah Klang",
+        "period": "Tempoh Kempen: Boleh dibincangkan mengikut keperluan perniagaan anda",
+        "price": "Hubungi Kami Untuk Kadar",
+        "price_note": "Fleksibel dan mesra objektif pemasaran awal",
+        "cta_text": "TEROKAI PAKEJ",
+        "whatsapp_msg": "Salam REVO, saya ingin mengetahui maklumat lanjut mengenai Pakej 01 - Brand Starter."
+    },
+    {
+        "id": "growth",
+        "code": "PACKAGE 02",
+        "name": "BRAND GROWTH",
+        "tag": "Pilihan Utama",
+        "description": "Untuk jenama yang merancang pendedahan promosi yang lebih meluas dan berimpak tinggi.",
+        "suitable_format": "Format Iklan: Gabungan paparan video dinamik, imej visual jenama dan pautan kod QR",
+        "coverage": "Liputan Kenderaan: Pendedahan menyeluruh merangkumi koridor perniagaan, pusat bandar & hotel terkemuka",
+        "period": "Tempoh Kempen: Fleksibel mengikut fasa kempen pemasaran (mingguan / bulanan)",
+        "price": "Hubungi Kami Untuk Kadar",
+        "price_note": "Sesuai untuk kempen pelancaran dan membina kesedaran jenama",
+        "cta_text": "BINCANGKAN KEPERLUAN",
+        "whatsapp_msg": "Salam REVO, saya ingin berbincang mengenai Pakej 02 - Brand Growth untuk jenama kami."
+    },
+    {
+        "id": "premium",
+        "code": "PACKAGE 03",
+        "name": "PREMIUM BRAND CAMPAIGN",
+        "tag": "Cadangan Khusus (Custom)",
+        "description": "Untuk perniagaan yang memerlukan cadangan kempen tersuai dengan kehadiran jenama yang lebih eksklusif.",
+        "suitable_format": "Format Iklan: Perbincangan perancangan kempen penuh, visual eksklusif dan pengalaman penumpang",
+        "coverage": "Liputan Kenderaan: Liputan khas korporat, koridor perjalanan KLIA dan pergerakan eksekutif",
+        "period": "Tempoh Kempen: Berdasarkan persetujuan dan strategi pemasaran menyeluruh",
+        "price": "Hubungi Kami Untuk Kadar",
+        "price_note": "Pelan khusus diselaraskan dengan objektif perniagaan anda",
+        "cta_text": "DAPATKAN CADANGAN",
+        "whatsapp_msg": "Salam REVO, kami ingin membincangkan cadangan Pakej 03 - Premium Brand Campaign tersuai."
+    }
+]

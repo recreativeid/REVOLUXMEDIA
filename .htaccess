@@ -1,0 +1,41 @@
+# REVO LUX MEDIA - Apache Hardened Configuration
+# Protection against CVE-2024-4577 (PHP-CGI Windows Argument Injection) & Web Attacks
+
+# 1. Disable Directory Browsing
+Options -Indexes -MultiViews
+
+# 2. Block access to sensitive and data files
+<FilesMatch "(^\.|\.json$|\.sqlite$|\.db$|\.log$|\.env$|\.ini$|\.bak$|\.md$)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 3. Prevent PHP CGI Argument Injection & Suspicious Queries (CVE-2024-4577)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /REVOLUXMEDIA/
+
+    # Block CVE-2024-4577 patterns: query strings starting with dash or soft hyphen (%2d, %ad) followed by PHP CGI flags
+    RewriteCond %{QUERY_STRING} ^(%2d|%ad|-)[a-zA-Z0-9_] [NC,OR]
+    RewriteCond %{QUERY_STRING} (?:%2d|%ad|-)(?:d|s|n|c|w) [NC,OR]
+    RewriteCond %{QUERY_STRING} (allow_url_include|auto_prepend_file|auto_append_file|disable_functions) [NC,OR]
+    RewriteCond %{QUERY_STRING} (php:\/\/input|php:\/\/filter|data:\/\/|expect:\/\/) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# 4. Security Headers fallback
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 5. Default Charset
+AddDefaultCharset UTF-8
