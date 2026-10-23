@@ -171,6 +171,34 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
       `,
       waText: 'Salam REVO, saya memerlukan cadangan Custom Campaign khusus untuk perniagaan kami.'
+    },
+    'splitscreen': {
+      title: 'Split Screen (Dual Content)',
+      tagline: 'Paparan dwiformat serentak untuk impak penyampaian mesej yang lebih menyeluruh',
+      content: `
+        <p><strong>Dua Mesej Dalam Satu Paparan Skrin Dinamik:</strong></p>
+        <p>Format Split Screen membolehkan paparan video bergerak di satu sisi (contohnya video penjenamaan / demonstrasi produk) digandingkan serentak dengan imej statik atau tawaran kod QR di sisi yang lain.</p>
+        <ul style="margin: 16px 0; padding-left: 20px; list-style: disc; color: #A9ADB4; font-size: 0.885rem; line-height: 1.7;">
+          <li><strong>Struktur Visual:</strong> Gabungan video dinamik dan grafik statik serentak.</li>
+          <li><strong>Peluang Interaksi:</strong> Penumpang boleh menonton video sambil mengimbas kod promosi tanpa perlu menunggu video selesai.</li>
+          <li><strong>Kesesuaian:</strong> Sangat berkesan untuk pelancaran produk baharu, pendaftaran acara korporat, atau kempen jualan terus.</li>
+        </ul>
+      `,
+      waText: 'Salam REVO, saya berminat dengan format Split Screen (Dual Content) untuk kempen jenama kami.'
+    },
+    'rotation': {
+      title: 'Content Rotation (Smart Scheduling)',
+      tagline: 'Penjadualan putaran pintar mengikut waktu puncak, laluan dan profil perjalanan',
+      content: `
+        <p><strong>Kandungan Dinamik Mengikut Konteks Perjalanan VIP:</strong></p>
+        <p>Format ini membolehkan kempen jenama anda dipaparkan mengikut algoritma giliran yang dioptimumkan — memastikan penonton sentiasa melihat kandungan yang segar dan bersesuaian dengan waktu dan zon perjalanan.</p>
+        <ul style="margin: 16px 0; padding-left: 20px; list-style: disc; color: #A9ADB4; font-size: 0.885rem; line-height: 1.7;">
+          <li><strong>Pelbagai Variasi Kreatif:</strong> Boleh memuatkan beberapa versi iklan dalam satu kempen untuk mengelakkan keletihan audiens.</li>
+          <li><strong>Penjadualan Pintar:</strong> Penyesuaian mesej antara perjalanan pagi korporat dan perjalanan santai petang/malam.</li>
+          <li><strong>Laporan Keterlihatan:</strong> Pengesahan kekerapan siaran secara berkala untuk ketelusan prestasi kempen.</li>
+        </ul>
+      `,
+      waText: 'Salam REVO, saya ingin mengetahui lebih lanjut mengenai pilihan Content Rotation (Smart Scheduling).'
     }
   };
 

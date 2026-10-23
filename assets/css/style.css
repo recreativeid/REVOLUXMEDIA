@@ -2086,6 +2086,287 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   PDF PROFILE INTEGRATIONS: BETTER THAN BILLBOARDS & TOUCHPOINTS
+   ========================================================================== */
+
+/* 500 Prospects Metric Banner */
+.prospects-banner {
+  background: linear-gradient(135deg, rgba(201, 164, 92, 0.14) 0%, rgba(18, 22, 28, 0.95) 100%);
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin: var(--space-2xl) 0;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(201, 164, 92, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.prospects-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(201, 164, 92, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.prospects-stat-box {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.prospects-number {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--c-gold-champagne);
+  text-shadow: 0 0 30px rgba(201, 164, 92, 0.35);
+}
+
+.prospects-plus {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-gold-metallic);
+}
+
+.prospects-label {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-white);
+  line-height: 1.3;
+}
+
+.prospects-label span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--c-gold-metallic);
+  letter-spacing: 0.12em;
+}
+
+.prospects-copy {
+  flex: 1;
+  color: var(--c-ivory-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .prospects-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+}
+
+/* Better Than Billboards Comparison Grid */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.comparison-card {
+  background: rgba(18, 22, 28, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: relative;
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.comparison-card.billboard {
+  border: 1px solid rgba(169, 173, 180, 0.18);
+  opacity: 0.85;
+}
+
+.comparison-card.revo {
+  border: 1px solid rgba(201, 164, 92, 0.4);
+  background: linear-gradient(180deg, rgba(24, 30, 38, 0.9) 0%, rgba(18, 22, 28, 0.95) 100%);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(201, 164, 92, 0.1);
+}
+
+.comparison-card-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: var(--space-md);
+}
+
+.comparison-card.billboard .comparison-card-badge {
+  background: rgba(169, 173, 180, 0.12);
+  color: var(--c-silver);
+}
+
+.comparison-card.revo .comparison-card-badge {
+  background: rgba(201, 164, 92, 0.2);
+  color: var(--c-gold-champagne);
+  border: 1px solid rgba(201, 164, 92, 0.3);
+}
+
+.comparison-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--c-white);
+}
+
+.comparison-card-desc {
+  font-size: 0.875rem;
+  color: var(--c-silver);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.comparison-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.comparison-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: 0.885rem;
+  line-height: 1.55;
+  color: var(--c-ivory-muted);
+}
+
+.comparison-card.billboard .comparison-feature-item svg {
+  color: #E57373;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.comparison-card.revo .comparison-feature-item svg {
+  color: var(--c-gold-metallic);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Customer Journey 6 Touchpoints */
+.touchpoints-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 992px) {
+  .touchpoints-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .touchpoints-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.touchpoint-card {
+  background: rgba(18, 22, 28, 0.65);
+  border: 1px solid rgba(201, 164, 92, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.touchpoint-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 164, 92, 0.4);
+  background: rgba(24, 30, 38, 0.85);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.touchpoint-num {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--c-gold-metallic);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.touchpoint-header-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.touchpoint-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(201, 164, 92, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-gold-champagne);
+  flex-shrink: 0;
+}
+
+.touchpoint-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-white);
+}
+
+.touchpoint-desc {
+  font-size: 0.84rem;
+  color: var(--c-silver);
+  line-height: 1.55;
+  margin-top: 6px;
+}
+
+/* Format Badges in Solutions */
+.format-pill-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(201, 164, 92, 0.12);
+  color: var(--c-gold-champagne);
+  border: 1px solid rgba(201, 164, 92, 0.25);
+  margin-bottom: 8px;
+}
+
+
+/* ==========================================================================
    ACCESSIBILITY & REDUCED MOTION
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {

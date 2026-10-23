@@ -52,11 +52,14 @@ define('BRAND_NETWORK', 'REVO PREMIUM MOBILE MEDIA NETWORK');
 define('BRAND_DOMAIN', 'REVOLUXMEDIA.my.id');
 define('PRIMARY_TAGLINE', 'YOUR BRAND. OUR JOURNEY.');
 define('SECONDARY_TAGLINE', 'THE MEDIA NETWORK INSIDE THE JOURNEY.');
+define('CORE_PILLARS_TAGLINE', 'PREMIUM CARS. PREMIUM PEOPLE. PREMIUM EXPOSURE.');
+define('CLOSING_PHILOSOPHY', 'Because the best brands don\'t just advertise — they travel with their audience.');
 define('MALAY_HEADLINE', 'IKLANKAN JENAMA ANDA DALAM ALPHARD & VELLFIRE.');
 define('DEFAULT_PHONE', '+60 11-1188 6654');
 define('DEFAULT_WHATSAPP_NUM', '601111886654');
 define('DEFAULT_EMAIL', 'SMGMH23@GMAIL.COM');
 define('TARGET_FLEET_COUNT', 50);
+define('MIN_DAILY_PROSPECTS', 500);
 
 // Pre-filled WhatsApp message
 define('DEFAULT_WA_MESSAGE', 'Salam REVO, saya ingin mengetahui lebih lanjut tentang peluang pengiklanan melalui Toyota Alphard dan Toyota Vellfire. Boleh kongsikan maklumat kempen dan pakej yang tersedia?');
