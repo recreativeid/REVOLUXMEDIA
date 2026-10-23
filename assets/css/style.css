@@ -743,57 +743,29 @@ button, input, select, textarea {
 }
 
 .hero-title {
-  font-size: 2.25rem;
+  font-size: clamp(1.9rem, 5.2vw, 3.8rem);
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   color: var(--c-white);
   letter-spacing: -0.02em;
 }
 
-@media (min-width: 480px) {
-  .hero-title {
-    font-size: 2.75rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 3.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-title {
-    font-size: 4rem;
-  }
-}
-
 .hero-headline-my {
-  font-size: 1.15rem;
+  font-size: clamp(0.925rem, 2.5vw, 1.25rem);
   font-weight: 600;
   color: var(--c-gold-champagne);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   line-height: 1.4;
-}
-
-@media (min-width: 768px) {
-  .hero-headline-my {
-    font-size: 1.35rem;
-  }
+  letter-spacing: 0.02em;
 }
 
 .hero-description {
-  font-size: 0.95rem;
-  color: var(--c-ivory-muted);
+  font-size: clamp(0.875rem, 2vw, 1.05rem);
+  color: var(--c-silver);
   margin-bottom: var(--space-xl);
-  line-height: 1.7;
-}
-
-@media (min-width: 768px) {
-  .hero-description {
-    font-size: 1.05rem;
-  }
+  line-height: 1.65;
+  max-width: 620px;
 }
 
 .hero-cta-group {
@@ -961,15 +933,18 @@ button, input, select, textarea {
   text-transform: uppercase;
 }
 
-/* Ivory Editorial Panel */
+/* Dark Luxury Matching Panel (No Harsh White Background) */
 .about-content-panel {
-  background: var(--c-ivory);
-  color: var(--c-obsidian);
+  background: linear-gradient(180deg, rgba(24, 30, 38, 0.85) 0%, rgba(18, 22, 28, 0.95) 100%);
+  color: var(--c-ivory);
   padding: var(--space-xl) var(--space-lg);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(201, 164, 92, 0.2);
+  border: 1px solid rgba(201, 164, 92, 0.25);
   border-left: 4px solid var(--c-gold-metallic);
   position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 @media (min-width: 768px) {
@@ -979,27 +954,27 @@ button, input, select, textarea {
 }
 
 .about-content-panel .section-tag {
-  color: #8C6D2D;
+  color: var(--c-gold-metallic);
 }
 .about-content-panel .section-tag::before {
-  background: #8C6D2D;
+  background: var(--c-gold-metallic);
 }
 
 .about-content-panel .section-title {
-  color: var(--c-obsidian);
+  color: var(--c-white);
   margin-bottom: var(--space-md);
 }
 
 .about-lead-text {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #1A1F26;
+  color: var(--c-gold-champagne);
   line-height: 1.6;
   margin-bottom: var(--space-md);
 }
 
 .about-body-text {
-  color: #4A515D;
+  color: var(--c-silver);
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: var(--space-lg);

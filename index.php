@@ -202,10 +202,10 @@ $defaultWaUrl = 'https://wa.me/' . $cleanWaNum . '?text=' . rawurlencode(DEFAULT
 
       <div class="revo-container">
         <div class="hero-content">
-          <!-- Small Label -->
+          <!-- Clean Minimal Badge -->
           <div class="hero-badge">
             <span class="hero-badge-dot"></span>
-            <span class="hero-badge-text"><?= e(BRAND_NETWORK) ?> &bull; 50 VEHICLES</span>
+            <span class="hero-badge-text">50 LUXURY VEHICLES &bull; KL &amp; KLIA</span>
           </div>
 
           <!-- Main English Headline -->
@@ -219,14 +219,9 @@ $defaultWaUrl = 'https://wa.me/' . $cleanWaNum . '?text=' . rawurlencode(DEFAULT
             <?= e(MALAY_HEADLINE) ?>
           </h2>
 
-          <!-- Core Pillars Tagline from PDF -->
-          <div style="display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 16px 0; padding: 4px 14px; background: rgba(201,164,92,0.12); border: 1px solid rgba(201,164,92,0.25); border-radius: 999px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; color: var(--c-gold-champagne);">
-            <span>PREMIUM CARS &bull; PREMIUM PEOPLE &bull; PREMIUM EXPOSURE</span>
-          </div>
-
-          <!-- Description -->
+          <!-- Description (Clean & Punchy) -->
           <p class="hero-description">
-            Rangkaian pengiklanan mudah alih generasi baharu yang menghubungkan jenama anda terus kepada audiens berprofil tinggi melalui armada eksklusif Toyota Alphard &amp; Vellfire di sekitar Kuala Lumpur, Lembah Klang dan koridor KLIA.
+            Rangkaian pengiklanan mudah alih premium dalam armada Toyota Alphard &amp; Vellfire untuk menghubungkan jenama anda terus kepada audiens eksekutif di Lembah Klang dan koridor KLIA.
           </p>
 
           <!-- CTAs -->
