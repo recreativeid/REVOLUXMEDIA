@@ -52,21 +52,43 @@
 
       <!-- Desktop Nav -->
       <nav class="desktop-nav" aria-label="Navigasi Utama">
-        <a href="#hero" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#advantage" class="nav-link">Advantage</a>
-        <a href="#how-it-works" class="nav-link">Touchpoints</a>
-        <a href="#solutions" class="nav-link">Solutions</a>
-        <a href="#network" class="nav-link">Our Network</a>
-        <a href="#industries" class="nav-link">Industries</a>
-        <a href="#packages" class="nav-link">Packages</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+        <a href="#advantage" class="nav-link" data-i18n="nav_advantage">Advantage</a>
+        <a href="#how-it-works" class="nav-link" data-i18n="nav_touchpoints">Touchpoints</a>
+        <a href="#solutions" class="nav-link" data-i18n="nav_solutions">Solutions</a>
+        <a href="#network" class="nav-link" data-i18n="nav_network">Our Network</a>
+        <a href="#industries" class="nav-link" data-i18n="nav_industries">Industries</a>
+        <a href="#packages" class="nav-link" data-i18n="nav_packages">Packages</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <!-- Action & Hamburger -->
       <div class="header-actions">
+        <!-- Language Switcher Pill (Malaysia & Indonesia) -->
+        <div class="revo-lang-switcher" id="revoLangSwitcher" role="group" aria-label="Pilih Bahasa / Language Selector">
+          <button type="button" class="lang-toggle-btn active" data-lang="ms" aria-label="Tukar ke Bahasa Malaysia" title="Bahasa Malaysia" aria-pressed="true">
+            <svg class="lang-flag-svg" viewBox="0 0 640 480" width="17" height="12" aria-hidden="true">
+              <rect width="640" height="480" fill="#cc0001"/>
+              <path d="M0,34.286h640M0,102.857h640M0,171.429h640M0,240h640M0,308.571h640M0,377.143h640M0,445.714h640" stroke="#fff" stroke-width="34.286"/>
+              <rect width="320" height="274.286" fill="#010066"/>
+              <circle cx="160" cy="137.143" r="82.286" fill="#fc0"/>
+              <circle cx="180" cy="137.143" r="72" fill="#010066"/>
+              <polygon points="215,137 195,147 205,127 185,137 200,119 178,131 190,110 172,127 178,104 167,125 164,102 161,125 150,104 156,127 138,110 150,131 128,119 143,137 123,127 133,147 113,137 133,157 123,177 143,167 128,185 150,173 138,194 156,177 150,200 161,179 164,202 167,179 178,200 172,177 190,194 178,173 200,185 185,167 205,177 195,157" fill="#fc0"/>
+            </svg>
+            <span class="lang-toggle-text">MY</span>
+          </button>
+          <button type="button" class="lang-toggle-btn" data-lang="id" aria-label="Ganti ke Bahasa Indonesia" title="Bahasa Indonesia" aria-pressed="false">
+            <svg class="lang-flag-svg" viewBox="0 0 640 480" width="17" height="12" aria-hidden="true">
+              <rect width="640" height="240" fill="#e70011"/>
+              <rect y="240" width="640" height="240" fill="#ffffff"/>
+            </svg>
+            <span class="lang-toggle-text">ID</span>
+          </button>
+        </div>
+
         <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-enquire-btn">
-          <span>ENQUIRE NOW</span>
+          <span data-i18n="nav_enquire_btn">ENQUIRE NOW</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
@@ -81,64 +103,94 @@
 
   <!-- Mobile Slide Navigation Drawer -->
   <div class="mobile-nav-panel" id="mobileNavPanel" aria-label="Menu Mudah Alih">
+    <!-- Mobile Drawer Language Selector -->
+    <div class="mobile-lang-drawer-card">
+      <div class="mobile-lang-drawer-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span data-i18n="mobile_lang_title">PILIHAN BAHASA</span>
+      </div>
+      <div class="mobile-lang-drawer-grid">
+        <button type="button" class="mobile-lang-drawer-btn active" data-lang="ms">
+          <svg class="lang-flag-svg" viewBox="0 0 640 480" width="18" height="13" aria-hidden="true">
+            <rect width="640" height="480" fill="#cc0001"/>
+            <path d="M0,34.286h640M0,102.857h640M0,171.429h640M0,240h640M0,308.571h640M0,377.143h640M0,445.714h640" stroke="#fff" stroke-width="34.286"/>
+            <rect width="320" height="274.286" fill="#010066"/>
+            <circle cx="160" cy="137.143" r="82.286" fill="#fc0"/>
+            <circle cx="180" cy="137.143" r="72" fill="#010066"/>
+            <polygon points="215,137 195,147 205,127 185,137 200,119 178,131 190,110 172,127 178,104 167,125 164,102 161,125 150,104 156,127 138,110 150,131 128,119 143,137 123,127 133,147 113,137 133,157 123,177 143,167 128,185 150,173 138,194 156,177 150,200 161,179 164,202 167,179 178,200 172,177 190,194 178,173 200,185 185,167 205,177 195,157" fill="#fc0"/>
+          </svg>
+          <span>Malaysia</span>
+          <span class="lang-check-icon">✓</span>
+        </button>
+        <button type="button" class="mobile-lang-drawer-btn" data-lang="id">
+          <svg class="lang-flag-svg" viewBox="0 0 640 480" width="18" height="13" aria-hidden="true">
+            <rect width="640" height="240" fill="#e70011"/>
+            <rect y="240" width="640" height="240" fill="#ffffff"/>
+          </svg>
+          <span>Indonesia</span>
+          <span class="lang-check-icon">✓</span>
+        </button>
+      </div>
+    </div>
+
     <ul class="mobile-nav-links">
       <li>
         <a href="#hero" class="mobile-nav-link">
-          <span>Home</span>
+          <span data-i18n="nav_home">Home</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#about" class="mobile-nav-link">
-          <span>About REVO</span>
+          <span data-i18n="nav_about">About REVO</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#advantage" class="mobile-nav-link">
-          <span>Advantage</span>
+          <span data-i18n="nav_advantage">Advantage</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#how-it-works" class="mobile-nav-link">
-          <span>Touchpoints</span>
+          <span data-i18n="nav_touchpoints">Touchpoints</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#solutions" class="mobile-nav-link">
-          <span>Solutions</span>
+          <span data-i18n="nav_solutions">Solutions</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#network" class="mobile-nav-link">
-          <span>Our Network</span>
+          <span data-i18n="nav_network">Our Network</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#industries" class="mobile-nav-link">
-          <span>Industries</span>
+          <span data-i18n="nav_industries">Industries</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#packages" class="mobile-nav-link">
-          <span>Packages</span>
+          <span data-i18n="nav_packages">Packages</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#faq" class="mobile-nav-link">
-          <span>FAQ</span>
+          <span data-i18n="nav_faq">FAQ</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
         <a href="#contact" class="mobile-nav-link">
-          <span>Contact</span>
+          <span data-i18n="nav_contact">Contact</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
@@ -146,7 +198,7 @@
 
     <div class="mobile-nav-footer">
       <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full-mobile">
-        <span>ENQUIRE NOW VIA WHATSAPP</span>
+        <span data-i18n="nav_enquire_mobile">ENQUIRE NOW VIA WHATSAPP</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
       <div class="mobile-contact-pill">
@@ -175,7 +227,7 @@
           <!-- Clean Minimal Badge -->
           <div class="hero-badge">
             <span class="hero-badge-dot"></span>
-            <span class="hero-badge-text">50 LUXURY VEHICLES &bull; KL &amp; KLIA</span>
+            <span class="hero-badge-text" data-i18n="hero_badge_text">50 LUXURY VEHICLES &bull; KL &amp; KLIA</span>
           </div>
 
           <!-- Main English Headline -->
@@ -185,29 +237,29 @@
           </h1>
 
           <!-- Supporting Malay Marketing Headline -->
-          <h2 class="hero-headline-my">
+          <h2 class="hero-headline-my" data-i18n="hero_headline_my">
             IKLANKAN JENAMA ANDA DALAM ALPHARD &amp; VELLFIRE.          </h2>
 
           <!-- Description (Clean & Punchy) -->
-          <p class="hero-description">
+          <p class="hero-description" data-i18n="hero_desc">
             Rangkaian pengiklanan mudah alih premium dalam armada Toyota Alphard &amp; Vellfire untuk menghubungkan jenama anda terus kepada audiens eksekutif di Lembah Klang dan koridor KLIA.
           </p>
 
           <!-- CTAs -->
           <div class="hero-cta-group">
             <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full-mobile">
-              <span>BINCANGKAN KEMPEN ANDA</span>
+              <span data-i18n="hero_cta_wa">BINCANGKAN KEMPEN ANDA</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a href="#solutions" class="btn btn-outline btn-full-mobile">
-              <span>TEROKAI CARA IA BERFUNGSI</span>
+              <span data-i18n="hero_cta_explore">TEROKAI CARA IA BERFUNGSI</span>
             </a>
           </div>
 
           <!-- Supporting Microcopy -->
           <div class="microcopy">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-            <span>Pakej dan pilihan kempen boleh dibincangkan mengikut keperluan perniagaan.</span>
+            <span data-i18n="hero_microcopy">Pakej dan pilihan kempen boleh dibincangkan mengikut keperluan perniagaan.</span>
           </div>
         </div>
       </div>
@@ -219,7 +271,7 @@
     <section class="value-strip" id="value-strip">
       <div class="revo-container">
         <div class="value-strip-header">
-          <h2 class="value-strip-title">Lebih Daripada Sekadar Ruang Pengiklanan.</h2>
+          <h2 class="value-strip-title" data-i18n="val_strip_title">Lebih Daripada Sekadar Ruang Pengiklanan.</h2>
         </div>
 
         <div class="value-grid">
@@ -232,8 +284,8 @@
                 <circle cx="16.5" cy="17.5" r="2.5"/>
               </svg>
             </div>
-            <h3 class="value-card-title">PREMIUM MOBILITY</h3>
-            <p class="value-card-desc">Pengiklanan dalam persekitaran kenderaan premium Toyota Alphard & Vellfire.</p>
+            <h3 class="value-card-title" data-i18n="val_card1_title">PREMIUM MOBILITY</h3>
+            <p class="value-card-desc" data-i18n="val_card1_desc">Pengiklanan dalam persekitaran kenderaan premium Toyota Alphard & Vellfire.</p>
           </div>
 
           <!-- Benefit 2 -->
@@ -243,8 +295,8 @@
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </div>
-            <h3 class="value-card-title">DISTINCTIVE BRAND PRESENCE</h3>
-            <p class="value-card-desc">Satu lagi cara tersendiri untuk memperkenalkan jenama anda kepada sasaran berimpak.</p>
+            <h3 class="value-card-title" data-i18n="val_card2_title">DISTINCTIVE BRAND PRESENCE</h3>
+            <p class="value-card-desc" data-i18n="val_card2_desc">Satu lagi cara tersendiri untuk memperkenalkan jenama anda kepada sasaran berimpak.</p>
           </div>
 
           <!-- Benefit 3 -->
@@ -256,8 +308,8 @@
                 <line x1="9" y1="21" x2="9" y2="9"/>
               </svg>
             </div>
-            <h3 class="value-card-title">FLEXIBLE CAMPAIGN OPTIONS</h3>
-            <p class="value-card-desc">Pilihan kempen dan format paparan yang boleh dibincangkan mengikut keperluan perniagaan.</p>
+            <h3 class="value-card-title" data-i18n="val_card3_title">FLEXIBLE CAMPAIGN OPTIONS</h3>
+            <p class="value-card-desc" data-i18n="val_card3_desc">Pilihan kempen dan format paparan yang boleh dibincangkan mengikut keperluan perniagaan.</p>
           </div>
         </div>
       </div>
@@ -273,30 +325,30 @@
           <div class="about-image-card">
             <img src="assets/images/alphard-interior.jpg" alt="Suasana kabin dalaman Alphard dengan paparan skrin media digital" loading="lazy">
             <div class="about-image-badge">
-              <span class="about-image-badge-text">PENGALAMAN KABIN VIP ALPHARD</span>
+              <span class="about-image-badge-text" data-i18n="about_badge_text">PENGALAMAN KABIN VIP ALPHARD</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A45C" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             </div>
           </div>
 
           <!-- Asymmetric Ivory Editorial Content Panel -->
           <div class="about-content-panel">
-            <div class="section-tag">MENGENAI REVO</div>
-            <h2 class="section-title">Membawa Pengiklanan Lebih Dekat Kepada Pengalaman Perjalanan.</h2>
+            <div class="section-tag" data-i18n="about_tag">MENGENAI REVO</div>
+            <h2 class="section-title" data-i18n="about_title">Membawa Pengiklanan Lebih Dekat Kepada Pengalaman Perjalanan.</h2>
 
-            <p class="about-lead-text">
+            <p class="about-lead-text" data-i18n="about_lead">
               REVO Premium Mobile Media Network dibangunkan dengan idea bahawa peluang memperkenalkan jenama tidak semestinya terhad kepada saluran pengiklanan konvensional.
             </p>
 
-            <p class="about-body-text">
+            <p class="about-body-text" data-i18n="about_p1">
               Melalui konsep pengiklanan mudah alih yang memanfaatkan kenderaan premium, REVO berhasrat membantu perniagaan meneroka cara berbeza untuk menyampaikan mesej, mempromosikan produk dan membina kesedaran jenama.
             </p>
 
-            <p class="about-body-text">
+            <p class="about-body-text" data-i18n="about_p2">
               Setiap kempen boleh dibincangkan berdasarkan objektif pemasaran, jenis kandungan dan pilihan liputan yang tersedia.
             </p>
 
             <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengenali%20pendekatan%20REVO%20dan%20membincangkan%20peluang%20kolaborasi." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <span>KENALI PENDEKATAN REVO</span>
+              <span data-i18n="about_cta">KENALI PENDEKATAN REVO</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -310,9 +362,9 @@
     <section class="revo-section" id="advantage" style="background: radial-gradient(ellipse at top, rgba(24, 30, 38, 0.7) 0%, rgba(5, 6, 8, 0.98) 100%);">
       <div class="revo-container">
         <div class="section-header text-center">
-          <div class="section-tag">LEBIH DARIPADA BILLBOARD BIASA</div>
-          <h2 class="section-title">Better Than Billboards. More Than Just An Ad.</h2>
-          <p class="section-subtitle">
+          <div class="section-tag" data-i18n="adv_tag">LEBIH DARIPADA BILLBOARD BIASA</div>
+          <h2 class="section-title" data-i18n="adv_title">Better Than Billboards. More Than Just An Ad.</h2>
+          <p class="section-subtitle" data-i18n="adv_subtitle">
             REVO membawa mesej jenama anda terus ke dalam ruang eksklusif penumpangnya — kabin Toyota Alphard &amp; Vellfire yang tenang, selesa dan bebas daripada sebarang gangguan.
           </p>
         </div>
@@ -323,16 +375,16 @@
             <span class="prospects-number">500</span>
             <span class="prospects-plus">+</span>
             <div class="prospects-label">
-              PROSPEK
-              <span>MINIMA SETIAP HARI</span>
+              <span data-i18n="adv_stat_label">PROSPEK</span>
+              <span data-i18n="adv_stat_sub">MINIMA SETIAP HARI</span>
             </div>
           </div>
-          <div class="prospects-copy">
+          <div class="prospects-copy" data-i18n="adv_stat_copy">
             <strong>Pendedahan Berterusan &amp; Konsisten:</strong> Dengan gabungan 50 unit Toyota Alphard &amp; Vellfire (2020+) yang beroperasi di laluan strategik Lembah Klang, KLIA dan kawasan tumpuan korporat, kami memastikan jenama anda disaksikan oleh ratusan hingga ribuan prospek berkualiti tinggi setiap hari secara konsisten.
           </div>
           <div style="flex-shrink: 0;">
             <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20bagaimana%20rangkaian%2050%20kenderaan%20REVO%20boleh%20menjangkau%20500%2B%20prospek%20harian%20untuk%20jenama%20saya." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <span>SEMAK POTENSI JANGKAUAN</span>
+              <span data-i18n="adv_stat_cta">SEMAK POTENSI JANGKAUAN</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -342,46 +394,46 @@
         <div class="comparison-grid">
           <!-- Traditional Billboard -->
           <div class="comparison-card billboard">
-            <span class="comparison-card-badge">Papan Iklan Tradisional</span>
-            <h3 class="comparison-card-title">Billboard Luar Jalan (OOH)</h3>
-            <p class="comparison-card-desc">Paparan statik di tepi lebuh raya yang bersaing dengan pelbagai gangguan visual lalu lintas.</p>
+            <span class="comparison-card-badge" data-i18n="adv_bb_badge">Papan Iklan Tradisional</span>
+            <h3 class="comparison-card-title" data-i18n="adv_bb_title">Billboard Luar Jalan (OOH)</h3>
+            <p class="comparison-card-desc" data-i18n="adv_bb_desc">Paparan statik di tepi lebuh raya yang bersaing dengan pelbagai gangguan visual lalu lintas.</p>
             <ul class="comparison-features">
               <li class="comparison-feature-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span><strong>Masa Tontonan Singkat:</strong> Hanya dilihat 2 hingga 3 saat secara sekilas sambil memandu laju.</span>
+                <span data-i18n="adv_bb_f1"><strong>Masa Tontonan Singkat:</strong> Hanya dilihat 2 hingga 3 saat secara sekilas sambil memandu laju.</span>
               </li>
               <li class="comparison-feature-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span><strong>Audiens Umum:</strong> Tiada saringan demografi sasaran — dilihat secara rawak tanpa segmentasi tepat.</span>
+                <span data-i18n="adv_bb_f2"><strong>Audiens Umum:</strong> Tiada saringan demografi sasaran — dilihat secara rawak tanpa segmentasi tepat.</span>
               </li>
               <li class="comparison-feature-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span><strong>Tiada Interaksi Serta-Merta:</strong> Pemandu tidak berupaya mengimbas kod QR atau membuka tawaran ketika memandu.</span>
+                <span data-i18n="adv_bb_f3"><strong>Tiada Interaksi Serta-Merta:</strong> Pemandu tidak berupaya mengimbas kod QR atau membuka tawaran ketika memandu.</span>
               </li>
             </ul>
           </div>
 
           <!-- REVO In-Car Media -->
           <div class="comparison-card revo">
-            <span class="comparison-card-badge">REVO In-Car Media Network</span>
-            <h3 class="comparison-card-title">Pengiklanan Digital Kabin VIP</h3>
-            <p class="comparison-card-desc">Pengalaman media interaktif beresolusi tinggi di dalam kabin eksekutif yang tenang dan selesa.</p>
+            <span class="comparison-card-badge" data-i18n="adv_revo_badge">REVO In-Car Media Network</span>
+            <h3 class="comparison-card-title" data-i18n="adv_revo_title">Pengiklanan Digital Kabin VIP</h3>
+            <p class="comparison-card-desc" data-i18n="adv_revo_desc">Pengalaman media interaktif beresolusi tinggi di dalam kabin eksekutif yang tenang dan selesa.</p>
             <ul class="comparison-features">
               <li class="comparison-feature-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>45–60 Minit Captive Audience:</strong> Penumpang berada dalam suasana santai sepanjang tempoh perjalanan.</span>
+                <span data-i18n="adv_revo_f1"><strong>45–60 Minit Captive Audience:</strong> Penumpang berada dalam suasana santai sepanjang tempoh perjalanan.</span>
               </li>
               <li class="comparison-feature-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>100% Focused &amp; Unskippable:</strong> Skrin digital 10–15 inci tepat pada aras mata di belakang kerusi pemandu tanpa 'ad-blocker'.</span>
+                <span data-i18n="adv_revo_f2"><strong>100% Focused &amp; Unskippable:</strong> Skrin digital 10–15 inci tepat pada aras mata di belakang kerusi pemandu tanpa 'ad-blocker'.</span>
               </li>
               <li class="comparison-feature-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Audiens Bernilai Tinggi (HNWIs):</strong> Menemui pembuat keputusan korporat, pelabur, VIP dan pelancong mewah.</span>
+                <span data-i18n="adv_revo_f3"><strong>Audiens Bernilai Tinggi (HNWIs):</strong> Menemui pembuat keputusan korporat, pelabur, VIP dan pelancong mewah.</span>
               </li>
               <li class="comparison-feature-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Tindakan Segera (QR Interactive):</strong> Penumpang mempunyai masa santai untuk mengimbas kod QR dan terus berhubung.</span>
+                <span data-i18n="adv_revo_f4"><strong>Tindakan Segera (QR Interactive):</strong> Penumpang mempunyai masa santai untuk mengimbas kod QR dan terus berhubung.</span>
               </li>
             </ul>
           </div>
@@ -395,9 +447,9 @@
     <section class="revo-section how-it-works-section" id="how-it-works">
       <div class="revo-container">
         <div class="section-header text-center">
-          <div class="section-tag">CARA KEMPEN BERFUNGSI</div>
-          <h2 class="section-title">Daripada Idea Kepada Kempen, Dengan Lebih Mudah.</h2>
-          <p class="section-subtitle">
+          <div class="section-tag" data-i18n="steps_tag">CARA KEMPEN BERFUNGSI</div>
+          <h2 class="section-title" data-i18n="steps_title">Daripada Idea Kepada Kempen, Dengan Lebih Mudah.</h2>
+          <p class="section-subtitle" data-i18n="steps_subtitle">
             Kami memudahkan proses pelaksanaan supaya anda dapat menumpukan kepada matlamat utama jenama tanpa kerumitan teknikal.
           </p>
         </div>
@@ -405,27 +457,27 @@
         <div class="steps-container">
           <!-- Step 1 -->
           <div class="step-card">
-            <div class="step-number-pill">STEP 01</div>
-            <h3 class="step-title">KONGSI OBJEKTIF ANDA</h3>
-            <p class="step-description">
+            <div class="step-number-pill" data-i18n="step1_pill">STEP 01</div>
+            <h3 class="step-title" data-i18n="step1_title">KONGSI OBJEKTIF ANDA</h3>
+            <p class="step-description" data-i18n="step1_desc">
               Beritahu kami tentang jenama, produk, sasaran pemasaran dan matlamat kempen anda melalui perbincangan ringkas.
             </p>
           </div>
 
           <!-- Step 2 -->
           <div class="step-card">
-            <div class="step-number-pill">STEP 02</div>
-            <h3 class="step-title">TEROKAI PILIHAN YANG SESUAI</h3>
-            <p class="step-description">
+            <div class="step-number-pill" data-i18n="step2_pill">STEP 02</div>
+            <h3 class="step-title" data-i18n="step2_title">TEROKAI PILIHAN YANG SESUAI</h3>
+            <p class="step-description" data-i18n="step2_desc">
               Bincangkan format iklan, tempoh kempen dan ketersediaan kenderaan bersama pasukan perunding REVO.
             </p>
           </div>
 
           <!-- Step 3 -->
           <div class="step-card">
-            <div class="step-number-pill">STEP 03</div>
-            <h3 class="step-title">RANCANG KEMPEN ANDA</h3>
-            <p class="step-description">
+            <div class="step-number-pill" data-i18n="step3_pill">STEP 03</div>
+            <h3 class="step-title" data-i18n="step3_title">RANCANG KEMPEN ANDA</h3>
+            <p class="step-description" data-i18n="step3_desc">
               Semak cadangan kempen dan butiran yang dipersetujui sebelum pelaksanaan bermula dengan lancar.
             </p>
           </div>
@@ -434,87 +486,87 @@
         <!-- Customer Journey Touchpoints Grid (from PDF Page 8 & 12) -->
         <div style="margin-top: var(--space-3xl); margin-bottom: var(--space-2xl);">
           <div class="section-header text-center" style="margin-bottom: var(--space-lg);">
-            <div class="section-tag">TITIK SENTUHAN AUDIENS</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 700; color: var(--c-white); margin-bottom: 8px;">
+            <div class="section-tag" data-i18n="tp_tag">TITIK SENTUHAN AUDIENS</div>
+            <h3 data-i18n="tp_title" style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 700; color: var(--c-white); margin-bottom: 8px;">
               The Customer Journey: From First Impression to Lasting Impact
             </h3>
-            <p class="section-subtitle">
+            <p class="section-subtitle" data-i18n="tp_subtitle">
               Jenama anda menemani audiens berprofil tinggi sepanjang setiap fasa perjalanan harian mereka di Malaysia.
             </p>
           </div>
 
           <div class="touchpoints-grid">
             <div class="touchpoint-card">
-              <span class="touchpoint-num">TOUCHPOINT 01</span>
+              <span class="touchpoint-num" data-i18n="tp1_num">TOUCHPOINT 01</span>
               <div class="touchpoint-header-wrap">
                 <div class="touchpoint-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
                 </div>
-                <h4 class="touchpoint-title">ARRIVAL &amp; KLIA</h4>
+                <h4 class="touchpoint-title" data-i18n="tp1_title">ARRIVAL &amp; KLIA</h4>
               </div>
-              <p class="touchpoint-desc">Sambutan eksklusif lapangan terbang KLIA &amp; KLIA2. Menemui pelancong dan delegasi VIP sebaik tiba ke Malaysia.</p>
+              <p class="touchpoint-desc" data-i18n="tp1_desc">Sambutan eksklusif lapangan terbang KLIA &amp; KLIA2. Menemui pelancong dan delegasi VIP sebaik tiba ke Malaysia.</p>
             </div>
 
             <div class="touchpoint-card">
-              <span class="touchpoint-num">TOUCHPOINT 02</span>
+              <span class="touchpoint-num" data-i18n="tp2_num">TOUCHPOINT 02</span>
               <div class="touchpoint-header-wrap">
                 <div class="touchpoint-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 011-1h10a1 1 0 011 1v3M9 11h2M9 15h2M13 11h2M13 15h2"/></svg>
                 </div>
-                <h4 class="touchpoint-title">HOTEL &amp; HOSPITALITY</h4>
+                <h4 class="touchpoint-title" data-i18n="tp2_title">HOTEL &amp; HOSPITALITY</h4>
               </div>
-              <p class="touchpoint-desc">Perjalanan ke hotel 5-bintang &amp; suite kediaman mewah. Berhubung dengan tetamu semasa suasana santai dan istirehat.</p>
+              <p class="touchpoint-desc" data-i18n="tp2_desc">Perjalanan ke hotel 5-bintang &amp; suite kediaman mewah. Berhubung dengan tetamu semasa suasana santai dan istirehat.</p>
             </div>
 
             <div class="touchpoint-card">
-              <span class="touchpoint-num">TOUCHPOINT 03</span>
+              <span class="touchpoint-num" data-i18n="tp3_num">TOUCHPOINT 03</span>
               <div class="touchpoint-header-wrap">
                 <div class="touchpoint-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
                 </div>
-                <h4 class="touchpoint-title">CORPORATE &amp; BUSINESS</h4>
+                <h4 class="touchpoint-title" data-i18n="tp3_title">CORPORATE &amp; BUSINESS</h4>
               </div>
-              <p class="touchpoint-desc">Urusan persidangan, mesyuarat perniagaan dan pergerakan korporat di menara komersial utama Lembah Klang.</p>
+              <p class="touchpoint-desc" data-i18n="tp3_desc">Urusan persidangan, mesyuarat perniagaan dan pergerakan korporat di menara komersial utama Lembah Klang.</p>
             </div>
 
             <div class="touchpoint-card">
-              <span class="touchpoint-num">TOUCHPOINT 04</span>
+              <span class="touchpoint-num" data-i18n="tp4_num">TOUCHPOINT 04</span>
               <div class="touchpoint-header-wrap">
                 <div class="touchpoint-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 </div>
-                <h4 class="touchpoint-title">EXECUTIVE &amp; VIP</h4>
+                <h4 class="touchpoint-title" data-i18n="tp4_title">EXECUTIVE &amp; VIP</h4>
               </div>
-              <p class="touchpoint-desc">Individu bernilai bersih tinggi (HNWIs), pembuat keputusan, pengarah syarikat dan delegasi kehormat peribadi.</p>
+              <p class="touchpoint-desc" data-i18n="tp4_desc">Individu bernilai bersih tinggi (HNWIs), pembuat keputusan, pengarah syarikat dan delegasi kehormat peribadi.</p>
             </div>
 
             <div class="touchpoint-card">
-              <span class="touchpoint-num">TOUCHPOINT 05</span>
+              <span class="touchpoint-num" data-i18n="tp5_num">TOUCHPOINT 05</span>
               <div class="touchpoint-header-wrap">
                 <div class="touchpoint-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 </div>
-                <h4 class="touchpoint-title">TOURISTS &amp; GLOBAL</h4>
+                <h4 class="touchpoint-title" data-i18n="tp5_title">TOURISTS &amp; GLOBAL</h4>
               </div>
-              <p class="touchpoint-desc">Pelawat antarabangsa yang mencari pengalaman terbaik, jenama barangan mewah, dan perkhidmatan berprestij.</p>
+              <p class="touchpoint-desc" data-i18n="tp5_desc">Pelawat antarabangsa yang mencari pengalaman terbaik, jenama barangan mewah, dan perkhidmatan berprestij.</p>
             </div>
 
             <div class="touchpoint-card">
-              <span class="touchpoint-num">TOUCHPOINT 06</span>
+              <span class="touchpoint-num" data-i18n="tp6_num">TOUCHPOINT 06</span>
               <div class="touchpoint-header-wrap">
                 <div class="touchpoint-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <h4 class="touchpoint-title">FAMILY TRAVEL</h4>
+                <h4 class="touchpoint-title" data-i18n="tp6_title">FAMILY TRAVEL</h4>
               </div>
-              <p class="touchpoint-desc">Perjalanan keluarga berprofil tinggi yang menikmati keselesaan ruang 7 &amp; 8 tempat duduk Alphard &amp; Vellfire.</p>
+              <p class="touchpoint-desc" data-i18n="tp6_desc">Perjalanan keluarga berprofil tinggi yang menikmati keselesaan ruang 7 &amp; 8 tempat duduk Alphard &amp; Vellfire.</p>
             </div>
           </div>
         </div>
 
         <div style="text-align: center;">
           <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20memulakan%20perbincangan%20mengenai%20perancangan%20kempen%20jenama%20kami." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <span>BERMULA DENGAN PERBINCANGAN</span>
+            <span data-i18n="tp_cta">BERMULA DENGAN PERBINCANGAN</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -527,9 +579,9 @@
     <section class="revo-section" id="solutions">
       <div class="revo-container">
         <div class="section-header text-center">
-          <div class="section-tag">PENYELESAIAN PENGIKLANAN</div>
-          <h2 class="section-title">Pilih Cara Yang Sesuai Untuk Menceritakan Jenama Anda.</h2>
-          <p class="section-subtitle">
+          <div class="section-tag" data-i18n="sol_tag">PENYELESAIAN PENGIKLANAN</div>
+          <h2 class="section-title" data-i18n="sol_title">Pilih Cara Yang Sesuai Untuk Menceritakan Jenama Anda.</h2>
+          <p class="section-subtitle" data-i18n="sol_subtitle">
             Setiap jenama mempunyai objektif yang berbeza. Terokai format pengiklanan yang mungkin sesuai dengan mesej dan keperluan kempen anda.
           </p>
         </div>
@@ -545,12 +597,12 @@
                   <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
                 </svg>
               </div>
-              <h3 class="solution-title">IN-CAR VIDEO ADVERTISING</h3>
-              <p class="solution-desc">Slot 5s / 10s / 15s / 20s / 30s. Video ringkas berimpak tinggi yang menarik perhatian dan mengukuhkan ingatan jenama.</p>
+              <h3 class="solution-title" data-i18n="sol1_title">IN-CAR VIDEO ADVERTISING</h3>
+              <p class="solution-desc" data-i18n="sol1_desc">Slot 5s / 10s / 15s / 20s / 30s. Video ringkas berimpak tinggi yang menarik perhatian dan mengukuhkan ingatan jenama.</p>
             </div>
             <div class="solution-footer">
               <button type="button" class="btn-text-link" data-solution-modal="video" aria-haspopup="dialog">
-                <span>Spesifikasi Format</span>
+                <span data-i18n="sol_btn_specs">Spesifikasi Format</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -567,12 +619,12 @@
                   <polyline points="21 15 16 10 5 21"/>
                 </svg>
               </div>
-              <h3 class="solution-title">IMAGE SLIDE (STATIC DISPLAY)</h3>
-              <p class="solution-desc">Ketengahkan visual jenama yang bersih, tajam dan beresolusi tinggi untuk menyampaikan mesej promosi dengan pantas.</p>
+              <h3 class="solution-title" data-i18n="sol2_title">IMAGE SLIDE (STATIC DISPLAY)</h3>
+              <p class="solution-desc" data-i18n="sol2_desc">Ketengahkan visual jenama yang bersih, tajam dan beresolusi tinggi untuk menyampaikan mesej promosi dengan pantas.</p>
             </div>
             <div class="solution-footer">
               <button type="button" class="btn-text-link" data-solution-modal="image" aria-haspopup="dialog">
-                <span>Spesifikasi Format</span>
+                <span data-i18n="sol_btn_specs">Spesifikasi Format</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -590,12 +642,12 @@
                   <rect x="3" y="14" width="7" height="7"/>
                 </svg>
               </div>
-              <h3 class="solution-title">BRANDED INTERACTIVE (QR/CTA)</h3>
-              <p class="solution-desc">Tingkatkan interaksi terus melalui imbasan kod QR pintar ke laman web, katalog digital, atau pautan tawaran eksklusif.</p>
+              <h3 class="solution-title" data-i18n="sol3_title">BRANDED INTERACTIVE (QR/CTA)</h3>
+              <p class="solution-desc" data-i18n="sol3_desc">Tingkatkan interaksi terus melalui imbasan kod QR pintar ke laman web, katalog digital, atau pautan tawaran eksklusif.</p>
             </div>
             <div class="solution-footer">
               <button type="button" class="btn-text-link" data-solution-modal="qr" aria-haspopup="dialog">
-                <span>Spesifikasi Format</span>
+                <span data-i18n="sol_btn_specs">Spesifikasi Format</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -611,12 +663,12 @@
                   <line x1="12" y1="3" x2="12" y2="21"/>
                 </svg>
               </div>
-              <h3 class="solution-title">SPLIT SCREEN (DUAL CONTENT)</h3>
-              <p class="solution-desc">Paparkan dua mesej serentak — video promosi sinematik di satu sisi bersama paparan sepanduk diskaun atau QR di sisi lain.</p>
+              <h3 class="solution-title" data-i18n="sol4_title">SPLIT SCREEN (DUAL CONTENT)</h3>
+              <p class="solution-desc" data-i18n="sol4_desc">Paparkan dua mesej serentak — video promosi sinematik di satu sisi bersama paparan sepanduk diskaun atau QR di sisi lain.</p>
             </div>
             <div class="solution-footer">
               <button type="button" class="btn-text-link" data-solution-modal="splitscreen" aria-haspopup="dialog">
-                <span>Spesifikasi Format</span>
+                <span data-i18n="sol_btn_specs">Spesifikasi Format</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -631,12 +683,12 @@
                   <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
                 </svg>
               </div>
-              <h3 class="solution-title">FULL SCREEN IMMERSIVE</h3>
-              <p class="solution-desc">Impak maksimum dengan paparan skrin penuh 1080p tanpa sempadan, memberikan pengalaman visual yang mengagumkan.</p>
+              <h3 class="solution-title" data-i18n="sol5_title">FULL SCREEN IMMERSIVE</h3>
+              <p class="solution-desc" data-i18n="sol5_desc">Impak maksimum dengan paparan skrin penuh 1080p tanpa sempadan, memberikan pengalaman visual yang mengagumkan.</p>
             </div>
             <div class="solution-footer">
               <button type="button" class="btn-text-link" data-solution-modal="awareness" aria-haspopup="dialog">
-                <span>Spesifikasi Format</span>
+                <span data-i18n="sol_btn_specs">Spesifikasi Format</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -651,19 +703,19 @@
                   <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
                 </svg>
               </div>
-              <h3 class="solution-title">CONTENT ROTATION</h3>
-              <p class="solution-desc">Penjadualan putaran iklan pintar mengikut rute, waktu puncak atau profil perjalanan VIP untuk memastikan mesej sentiasa segar.</p>
+              <h3 class="solution-title" data-i18n="sol6_title">CONTENT ROTATION</h3>
+              <p class="solution-desc" data-i18n="sol6_desc">Penjadualan putaran iklan pintar mengikut rute, waktu puncak atau profil perjalanan VIP untuk memastikan mesej sentiasa segar.</p>
             </div>
             <div class="solution-footer">
               <button type="button" class="btn-text-link" data-solution-modal="rotation" aria-haspopup="dialog">
-                <span>Spesifikasi Format</span>
+                <span data-i18n="sol_btn_specs">Spesifikasi Format</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
           </div>
         </div>
 
-        <p class="solution-disclaimer">
+        <p class="solution-disclaimer" data-i18n="sol_disclaimer">
           *Nota: Format pengiklanan bergantung pada ketersediaan peralatan kenderaan dan spesifikasi kempen yang disahkan.
         </p>
       </div>
@@ -677,39 +729,39 @@
         <div class="network-grid">
           <!-- Content Box -->
           <div>
-            <div class="section-tag">RANGKAIAN KAMI</div>
-            <h2 class="section-title">50 Kenderaan. Satu Rangkaian Media.</h2>
+            <div class="section-tag" data-i18n="net_tag">RANGKAIAN KAMI</div>
+            <h2 class="section-title" data-i18n="net_title">50 Kenderaan. Satu Rangkaian Media.</h2>
             
-            <p class="section-subtitle" style="margin-bottom: var(--space-md);">
+            <p class="section-subtitle" data-i18n="net_subtext" style="margin-bottom: var(--space-md);">
               REVO menyasarkan pembangunan rangkaian sehingga 50 buah Toyota Alphard dan Toyota Vellfire di sekitar Lembah Klang, dengan potensi peluang kempen berkaitan perjalanan lapangan terbang, hotel, pelancongan dan pengangkutan korporat.            </p>
 
             <!-- 4 Potential Campaign Contexts -->
             <div class="network-contexts-grid">
               <div class="network-context-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span class="network-context-name">Klang Valley</span>
+                <span class="network-context-name" data-i18n="net_ctx1">Klang Valley</span>
               </div>
               <div class="network-context-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
-                <span class="network-context-name">KLIA Corridor</span>
+                <span class="network-context-name" data-i18n="net_ctx2">KLIA Corridor</span>
               </div>
               <div class="network-context-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 011-1h10a1 1 0 011 1v3M9 11h2M9 15h2M13 11h2M13 15h2"/></svg>
-                <span class="network-context-name">Hotels & Hospitality</span>
+                <span class="network-context-name" data-i18n="net_ctx3">Hotels & Hospitality</span>
               </div>
               <div class="network-context-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-                <span class="network-context-name">Corporate Mobility</span>
+                <span class="network-context-name" data-i18n="net_ctx4">Corporate Mobility</span>
               </div>
             </div>
 
             <!-- Responsible presentation note -->
-            <div class="network-responsible-note">
+            <div class="network-responsible-note" data-i18n="net_responsible">
               Rangkaian 50 kenderaan merupakan sasaran fasa pembangunan berperingkat bagi memastikan kualiti penyiaran dan pengurusan kempen beroperasi dengan tahap kecemerlangan tertinggi.
             </div>
 
             <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20menyemak%20pilihan%20liputan%20kenderaan%20Alphard%20%26%20Vellfire%20yang%20tersedia%20untuk%20kempen%20jenama%20saya." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <span>SEMAK PILIHAN LIPUTAN</span>
+              <span data-i18n="net_cta">SEMAK PILIHAN LIPUTAN</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -728,9 +780,9 @@
     <section class="revo-section industries-section" id="industries">
       <div class="revo-container">
         <div class="section-header text-center">
-          <div class="section-tag">UNTUK PELBAGAI INDUSTRI</div>
-          <h2 class="section-title">Adakah REVO Sesuai Untuk Jenama Anda?</h2>
-          <p class="section-subtitle">
+          <div class="section-tag" data-i18n="ind_tag">UNTUK PELBAGAI INDUSTRI</div>
+          <h2 class="section-title" data-i18n="ind_title">Adakah REVO Sesuai Untuk Jenama Anda?</h2>
+          <p class="section-subtitle" data-i18n="ind_subtitle">
             Daripada perniagaan hospitaliti hingga jenama korporat, setiap kempen bermula dengan memahami siapa yang ingin anda jangkau.
           </p>
         </div>
@@ -741,7 +793,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <span class="industry-name">Luxury &amp; Fashion</span>
+            <span class="industry-name" data-i18n="ind_1">Luxury &amp; Fashion</span>
           </div>
 
           <!-- 2. Automotive -->
@@ -749,7 +801,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
             </div>
-            <span class="industry-name">Automotive</span>
+            <span class="industry-name" data-i18n="ind_2">Automotive</span>
           </div>
 
           <!-- 3. Real Estate & Property -->
@@ -757,7 +809,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5"/></svg>
             </div>
-            <span class="industry-name">Real Estate &amp; Property</span>
+            <span class="industry-name" data-i18n="ind_3">Real Estate &amp; Property</span>
           </div>
 
           <!-- 4. Hospitality & Tourism -->
@@ -765,7 +817,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg>
             </div>
-            <span class="industry-name">Hospitality &amp; Tourism</span>
+            <span class="industry-name" data-i18n="ind_4">Hospitality &amp; Tourism</span>
           </div>
 
           <!-- 5. Banking & Finance -->
@@ -773,7 +825,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
             </div>
-            <span class="industry-name">Banking &amp; Finance</span>
+            <span class="industry-name" data-i18n="ind_5">Banking &amp; Finance</span>
           </div>
 
           <!-- 6. Food & Beverage -->
@@ -781,7 +833,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
             </div>
-            <span class="industry-name">Food &amp; Beverage</span>
+            <span class="industry-name" data-i18n="ind_6">Food &amp; Beverage</span>
           </div>
 
           <!-- 7. Health & Wellness -->
@@ -789,7 +841,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
-            <span class="industry-name">Health &amp; Wellness</span>
+            <span class="industry-name" data-i18n="ind_7">Health &amp; Wellness</span>
           </div>
 
           <!-- 8. Technology & Telecoms -->
@@ -797,7 +849,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
-            <span class="industry-name">Technology &amp; Telecoms</span>
+            <span class="industry-name" data-i18n="ind_8">Technology &amp; Telecoms</span>
           </div>
 
           <!-- 9. Corporate & B2B -->
@@ -805,7 +857,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
             </div>
-            <span class="industry-name">Corporate &amp; B2B</span>
+            <span class="industry-name" data-i18n="ind_9">Corporate &amp; B2B</span>
           </div>
 
           <!-- 10. Education & Academics -->
@@ -813,7 +865,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
-            <span class="industry-name">Education &amp; Training</span>
+            <span class="industry-name" data-i18n="ind_10">Education &amp; Training</span>
           </div>
 
           <!-- 11. Government & Social Campaigns -->
@@ -821,7 +873,7 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h16M2 10l10-7 10 7M4 10v10h16V10M9 20v-6h6v6"/></svg>
             </div>
-            <span class="industry-name">Government &amp; NGO</span>
+            <span class="industry-name" data-i18n="ind_11">Government &amp; NGO</span>
           </div>
 
           <!-- 12. Entertainment & Media -->
@@ -829,18 +881,18 @@
             <div class="industry-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
-            <span class="industry-name">Entertainment &amp; Media</span>
+            <span class="industry-name" data-i18n="ind_12">Entertainment &amp; Media</span>
           </div>
         </div>
 
         <!-- Closing Banner with Soft Selling CTA -->
         <div class="industry-cta-banner">
-          <div class="industry-cta-text">
+          <div class="industry-cta-text" data-i18n="ind_banner_text">
             <strong>Tidak pasti sama ada perkhidmatan ini sesuai untuk perniagaan anda?</strong><br>
             Ceritakan objektif pemasaran anda kepada kami untuk meneroka potensi yang bersesuaian.
           </div>
           <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20berbincang%20sama%20ada%20medium%20ini%20sesuai%20untuk%20industri%20perniagaan%20saya." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-            <span>BINCANG DENGAN REVO</span>
+            <span data-i18n="ind_cta">BINCANG DENGAN REVO</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -853,122 +905,125 @@
     <section class="revo-section packages-section" id="packages">
       <div class="revo-container">
         <div class="section-header text-center">
-          <div class="section-tag">PILIHAN KEMPEN</div>
-          <h2 class="section-title">Kita Mulakan Dengan Keperluan Jenama Anda.</h2>
-          <p class="section-subtitle">
+          <div class="section-tag" data-i18n="pkg_tag">PILIHAN KEMPEN</div>
+          <h2 class="section-title" data-i18n="pkg_title">Kita Mulakan Dengan Keperluan Jenama Anda.</h2>
+          <p class="section-subtitle" data-i18n="pkg_subtitle">
             Tidak semua perniagaan memerlukan pendekatan yang sama. Bincangkan keperluan anda untuk meneroka pilihan kempen yang bersesuaian.
           </p>
         </div>
 
         <div class="packages-grid">
-                                  <div class="package-card ">
-              <span class="package-code">PACKAGE 01</span>
-              <h3 class="package-title">BRAND STARTER</h3>
-              
-                              <span class="package-tag-badge">Eksplorasi Awal</span>
-              
-              <p class="package-desc">Sesuai untuk perniagaan yang baru ingin meneroka medium pengiklanan mudah alih premium.</p>
+          <div class="package-card ">
+            <span class="package-code" data-i18n="pkg1_code">PACKAGE 01</span>
+            <h3 class="package-title" data-i18n="pkg1_name">BRAND STARTER</h3>
+            
+            <span class="package-tag-badge" data-i18n="pkg1_tag">Eksplorasi Awal</span>
+            
+            <p class="package-desc" data-i18n="pkg1_desc">Sesuai untuk perniagaan yang baru ingin meneroka medium pengiklanan mudah alih premium.</p>
 
-              <ul class="package-specs">
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Format Iklan: Tertakluk kepada ketersediaan slot (video ringkas / paparan visual digital beresolusi tinggi)</span>
-                </li>
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Liputan Kenderaan: Armada terpilih Alphard &amp; Vellfire di kawasan tumpuan Lembah Klang</span>
-                </li>
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Tempoh Kempen: Boleh dibincangkan mengikut keperluan perniagaan anda</span>
-                </li>
-              </ul>
+            <ul class="package-specs">
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg1_format">Format Iklan: Tertakluk kepada ketersediaan slot (video ringkas / paparan visual digital beresolusi tinggi)</span>
+              </li>
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg1_coverage">Liputan Kenderaan: Armada terpilih Alphard &amp; Vellfire di kawasan tumpuan Lembah Klang</span>
+              </li>
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg1_period">Tempoh Kempen: Boleh dibincangkan mengikut keperluan perniagaan anda</span>
+              </li>
+            </ul>
 
-              <div class="package-price-wrap">
-                <div class="package-price-label">Struktur Pelaburan:</div>
-                <div class="package-price">Hubungi Kami Untuk Kadar</div>
-                <div class="package-price-sub">Fleksibel dan mesra objektif pemasaran awal</div>
-              </div>
-
-              <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20maklumat%20lanjut%20mengenai%20Pakej%2001%20-%20Brand%20Starter." target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full-mobile">
-                <span>TEROKAI PAKEJ</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+            <div class="package-price-wrap">
+              <div class="package-price-label" data-i18n="pkg_price_label">Struktur Pelaburan:</div>
+              <div class="package-price" data-i18n="pkg1_price">Hubungi Kami Untuk Kadar</div>
+              <div class="package-price-sub" data-i18n="pkg1_note">Fleksibel dan mesra objektif pemasaran awal</div>
             </div>
-                                  <div class="package-card highlight">
-              <span class="package-code">PACKAGE 02</span>
-              <h3 class="package-title">BRAND GROWTH</h3>
-              
-                              <span class="package-tag-badge">Pilihan Utama</span>
-              
-              <p class="package-desc">Untuk jenama yang merancang pendedahan promosi yang lebih meluas dan berimpak tinggi.</p>
 
-              <ul class="package-specs">
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Format Iklan: Gabungan paparan video dinamik, imej visual jenama dan pautan kod QR</span>
-                </li>
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Liputan Kenderaan: Pendedahan menyeluruh merangkumi koridor perniagaan, pusat bandar &amp; hotel terkemuka</span>
-                </li>
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Tempoh Kempen: Fleksibel mengikut fasa kempen pemasaran (mingguan / bulanan)</span>
-                </li>
-              </ul>
+            <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20maklumat%20lanjut%20mengenai%20Pakej%2001%20-%20Brand%20Starter." target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full-mobile">
+              <span data-i18n="pkg1_cta">TEROKAI PAKEJ</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
 
-              <div class="package-price-wrap">
-                <div class="package-price-label">Struktur Pelaburan:</div>
-                <div class="package-price">Hubungi Kami Untuk Kadar</div>
-                <div class="package-price-sub">Sesuai untuk kempen pelancaran dan membina kesedaran jenama</div>
-              </div>
+          <div class="package-card highlight">
+            <span class="package-code" data-i18n="pkg2_code">PACKAGE 02</span>
+            <h3 class="package-title" data-i18n="pkg2_name">BRAND GROWTH</h3>
+            
+            <span class="package-tag-badge" data-i18n="pkg2_tag">Pilihan Utama</span>
+            
+            <p class="package-desc" data-i18n="pkg2_desc">Untuk jenama yang merancang pendedahan promosi yang lebih meluas dan berimpak tinggi.</p>
 
-              <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20berbincang%20mengenai%20Pakej%2002%20-%20Brand%20Growth%20untuk%20jenama%20kami." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full-mobile">
-                <span>BINCANGKAN KEPERLUAN</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+            <ul class="package-specs">
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg2_format">Format Iklan: Gabungan paparan video dinamik, imej visual jenama dan pautan kod QR</span>
+              </li>
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg2_coverage">Liputan Kenderaan: Pendedahan menyeluruh merangkumi koridor perniagaan, pusat bandar &amp; hotel terkemuka</span>
+              </li>
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg2_period">Tempoh Kempen: Fleksibel mengikut fasa kempen pemasaran (mingguan / bulanan)</span>
+              </li>
+            </ul>
+
+            <div class="package-price-wrap">
+              <div class="package-price-label" data-i18n="pkg_price_label">Struktur Pelaburan:</div>
+              <div class="package-price" data-i18n="pkg2_price">Hubungi Kami Untuk Kadar</div>
+              <div class="package-price-sub" data-i18n="pkg2_note">Sesuai untuk kempen pelancaran dan membina kesedaran jenama</div>
             </div>
-                                  <div class="package-card ">
-              <span class="package-code">PACKAGE 03</span>
-              <h3 class="package-title">PREMIUM BRAND CAMPAIGN</h3>
-              
-                              <span class="package-tag-badge">Cadangan Khusus (Custom)</span>
-              
-              <p class="package-desc">Untuk perniagaan yang memerlukan cadangan kempen tersuai dengan kehadiran jenama yang lebih eksklusif.</p>
 
-              <ul class="package-specs">
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Format Iklan: Perbincangan perancangan kempen penuh, visual eksklusif dan pengalaman penumpang</span>
-                </li>
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Liputan Kenderaan: Liputan khas korporat, koridor perjalanan KLIA dan pergerakan eksekutif</span>
-                </li>
-                <li class="package-spec-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                  <span>Tempoh Kempen: Berdasarkan persetujuan dan strategi pemasaran menyeluruh</span>
-                </li>
-              </ul>
+            <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20berbincang%20mengenai%20Pakej%2002%20-%20Brand%20Growth%20untuk%20jenama%20kami." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full-mobile">
+              <span data-i18n="pkg2_cta">BINCANGKAN KEPERLUAN</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
 
-              <div class="package-price-wrap">
-                <div class="package-price-label">Struktur Pelaburan:</div>
-                <div class="package-price">Hubungi Kami Untuk Kadar</div>
-                <div class="package-price-sub">Pelan khusus diselaraskan dengan objektif perniagaan anda</div>
-              </div>
+          <div class="package-card ">
+            <span class="package-code" data-i18n="pkg3_code">PACKAGE 03</span>
+            <h3 class="package-title" data-i18n="pkg3_name">PREMIUM BRAND CAMPAIGN</h3>
+            
+            <span class="package-tag-badge" data-i18n="pkg3_tag">Cadangan Khusus (Custom)</span>
+            
+            <p class="package-desc" data-i18n="pkg3_desc">Untuk perniagaan yang memerlukan cadangan kempen tersuai dengan kehadiran jenama yang lebih eksklusif.</p>
 
-              <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20kami%20ingin%20membincangkan%20cadangan%20Pakej%2003%20-%20Premium%20Brand%20Campaign%20tersuai." target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full-mobile">
-                <span>DAPATKAN CADANGAN</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+            <ul class="package-specs">
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg3_format">Format Iklan: Perbincangan perancangan kempen penuh, visual eksklusif dan pengalaman penumpang</span>
+              </li>
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg3_coverage">Liputan Kenderaan: Liputan khas korporat, koridor perjalanan KLIA dan pergerakan eksekutif</span>
+              </li>
+              <li class="package-spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span data-i18n="pkg3_period">Tempoh Kempen: Berdasarkan persetujuan dan strategi pemasaran menyeluruh</span>
+              </li>
+            </ul>
+
+            <div class="package-price-wrap">
+              <div class="package-price-label" data-i18n="pkg_price_label">Struktur Pelaburan:</div>
+              <div class="package-price" data-i18n="pkg3_price">Hubungi Kami Untuk Kadar</div>
+              <div class="package-price-sub" data-i18n="pkg3_note">Pelan khusus diselaraskan dengan objektif perniagaan anda</div>
             </div>
-                  </div>
+
+            <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20kami%20ingin%20membincangkan%20cadangan%20Pakej%2003%20-%20Premium%20Brand%20Campaign%20tersuai." target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full-mobile">
+              <span data-i18n="pkg3_cta">DAPATKAN CADANGAN</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
 
         <!-- Soft Reassurance Box -->
         <div class="soft-reassurance-box">
-          <p>
-            Masih dalam peringkat merancang? Tidak mengapa. Hubungi kami untuk memahami pilihan yang tersedia sebelum membuat keputusan.          </p>
+          <p data-i18n="pkg_reassurance">
+            Masih dalam peringkat merancang? Tidak mengapa. Hubungi kami untuk memahami pilihan yang tersedia sebelum membuat keputusan.
+          </p>
         </div>
       </div>
     </section>
@@ -979,9 +1034,9 @@
     <section class="revo-section faq-section" id="faq">
       <div class="revo-container">
         <div class="section-header text-center">
-          <div class="section-tag">SEBELUM ANDA BERMULA</div>
-          <h2 class="section-title">Beberapa Perkara Yang Anda Mungkin Ingin Tahu.</h2>
-          <p class="section-subtitle">
+          <div class="section-tag" data-i18n="faq_tag">SEBELUM ANDA BERMULA</div>
+          <h2 class="section-title" data-i18n="faq_title">Beberapa Perkara Yang Anda Mungkin Ingin Tahu.</h2>
+          <p class="section-subtitle" data-i18n="faq_subtitle">
             Jawapan telus kepada persoalan lazim untuk membantu anda membuat penilaian awal dengan yakin.
           </p>
         </div>
@@ -990,65 +1045,65 @@
           <!-- FAQ 1 -->
           <div class="faq-item">
             <button type="button" class="faq-header" aria-expanded="false">
-              <span>Apakah jenis perniagaan yang sesuai?</span>
+              <span data-i18n="faq1_q">Apakah jenis perniagaan yang sesuai?</span>
               <div class="faq-icon" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
               </div>
             </button>
             <div class="faq-body">
-              <p>REVO terbuka kepada pertanyaan daripada pelbagai industri yang ingin meneroka pengiklanan mudah alih sebagai sebahagian daripada strategi pemasaran — termasuk perhotelan, pelancongan, pembangunan hartanah, perbankan, perkhidmatan korporat dan jenama gaya hidup.</p>
+              <p data-i18n="faq1_a">REVO terbuka kepada pertanyaan daripada pelbagai industri yang ingin meneroka pengiklanan mudah alih sebagai sebahagian daripada strategi pemasaran — termasuk perhotelan, pelancongan, pembangunan hartanah, perbankan, perkhidmatan korporat dan jenama gaya hidup.</p>
             </div>
           </div>
 
           <!-- FAQ 2 -->
           <div class="faq-item">
             <button type="button" class="faq-header" aria-expanded="false">
-              <span>Berapakah kos untuk memulakan kempen?</span>
+              <span data-i18n="faq2_q">Berapakah kos untuk memulakan kempen?</span>
               <div class="faq-icon" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
               </div>
             </button>
             <div class="faq-body">
-              <p>Kos bergantung pada skop kempen, format iklan (video atau imej), tempoh siaran dan ketersediaan slot kenderaan. Hubungi kami untuk membincangkan pilihan yang sesuai mengikut bajet dan sasaran pulangan pemasaran anda.</p>
+              <p data-i18n="faq2_a">Kos bergantung pada skop kempen, format iklan (video atau imej), tempoh siaran dan ketersediaan slot kenderaan. Hubungi kami untuk membincangkan pilihan yang sesuai mengikut bajet dan sasaran pulangan pemasaran anda.</p>
             </div>
           </div>
 
           <!-- FAQ 3 -->
           <div class="faq-item">
             <button type="button" class="faq-header" aria-expanded="false">
-              <span>Adakah saya perlu menyediakan bahan iklan sendiri?</span>
+              <span data-i18n="faq3_q">Adakah saya perlu menyediakan bahan iklan sendiri?</span>
               <div class="faq-icon" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
               </div>
             </button>
             <div class="faq-body">
-              <p>Keperluan bahan kreatif boleh dibincangkan bersama pasukan REVO berdasarkan format iklan dan spesifikasi kempen. Anda boleh menggunakan aset sedia ada atau kami boleh berkongsi panduan teknikal resolusi dan saiz paparan yang optimum.</p>
+              <p data-i18n="faq3_a">Keperluan bahan kreatif boleh dibincangkan bersama pasukan REVO berdasarkan format iklan dan spesifikasi kempen. Anda boleh menggunakan aset sedia ada atau kami boleh berkongsi panduan teknikal resolusi dan saiz paparan yang optimum.</p>
             </div>
           </div>
 
           <!-- FAQ 4 -->
           <div class="faq-item">
             <button type="button" class="faq-header" aria-expanded="false">
-              <span>Bagaimanakah liputan kempen ditentukan?</span>
+              <span data-i18n="faq4_q">Bagaimanakah liputan kempen ditentukan?</span>
               <div class="faq-icon" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
               </div>
             </button>
             <div class="faq-body">
-              <p>Pilihan liputan bergantung pada kenderaan dan operasi yang tersedia pada masa kempen dirancang, termasuk laluan mobiliti di sekitar Lembah Klang, koridor perhubungan KLIA, pusat komersial dan destinasi hotel utama.</p>
+              <p data-i18n="faq4_a">Pilihan liputan bergantung pada kenderaan dan operasi yang tersedia pada masa kempen dirancang, termasuk laluan mobiliti di sekitar Lembah Klang, koridor perhubungan KLIA, pusat komersial dan destinasi hotel utama.</p>
             </div>
           </div>
 
           <!-- FAQ 5 -->
           <div class="faq-item">
             <button type="button" class="faq-header" aria-expanded="false">
-              <span>Bagaimanakah saya boleh mendapatkan maklumat lanjut?</span>
+              <span data-i18n="faq5_q">Bagaimanakah saya boleh mendapatkan maklumat lanjut?</span>
               <div class="faq-icon" aria-hidden="true">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
               </div>
             </button>
             <div class="faq-body">
-              <p>Hubungi kami melalui WhatsApp untuk berkongsi objektif pemasaran dan mendapatkan maklumat lanjut tanpa sebarang obligasi pembelian segera.</p>
+              <p data-i18n="faq5_a">Hubungi kami melalui WhatsApp untuk berkongsi objektif pemasaran dan mendapatkan maklumat lanjut tanpa sebarang obligasi pembelian segera.</p>
             </div>
           </div>
         </div>
@@ -1066,23 +1121,23 @@
 
       <div class="revo-container">
         <div class="conversion-content">
-          <div class="section-tag" style="justify-content: center;">PUT IT INSIDE THE JOURNEY</div>
-          <h2 class="conversion-title">Because The Best Brands Don't Just Advertise &mdash; <span class="text-gold-gradient">They Travel With Their Audience.</span></h2>
-          <p class="conversion-subtext">
+          <div class="section-tag" data-i18n="conv_tag" style="justify-content: center;">PUT IT INSIDE THE JOURNEY</div>
+          <h2 class="conversion-title" data-i18n="conv_title">Because The Best Brands Don't Just Advertise &mdash; <span class="text-gold-gradient">They Travel With Their Audience.</span></h2>
+          <p class="conversion-subtext" data-i18n="conv_subtext">
             Bina pendedahan jenama yang eksklusif, dipercayai dan berimpak tinggi dalam perjalanan eksekutif harian di Malaysia. Let's Build Your Brand Together.
           </p>
 
           <div class="conversion-cta-wrap">
             <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full-mobile">
-              <span>BERBUAL DENGAN PASUKAN REVO</span>
+              <span data-i18n="conv_cta_wa">BERBUAL DENGAN PASUKAN REVO</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a href="#packages" class="btn btn-outline btn-full-mobile">
-              <span>LIHAT PILIHAN KEMPEN</span>
+              <span data-i18n="conv_cta_pkg">LIHAT PILIHAN KEMPEN</span>
             </a>
           </div>
 
-          <div class="conversion-small-text">
+          <div class="conversion-small-text" data-i18n="conv_small">
             Tiada keperluan untuk menyediakan pelan lengkap. Kongsikan idea anda dan kita mulakan perbincangan.
           </div>
         </div>
@@ -1097,9 +1152,9 @@
         <div class="contact-layout">
           <!-- Information & Direct WhatsApp -->
           <div class="contact-info-col">
-            <div class="section-tag">HUBUNGI KAMI</div>
-            <h2 class="section-title">Ceritakan Sedikit Tentang Kempen Anda.</h2>
-            <p class="section-subtitle">
+            <div class="section-tag" data-i18n="contact_tag">HUBUNGI KAMI</div>
+            <h2 class="section-title" data-i18n="contact_title">Ceritakan Sedikit Tentang Kempen Anda.</h2>
+            <p class="section-subtitle" data-i18n="contact_subtitle">
               Kami ingin memahami keperluan anda supaya perbincangan boleh bermula dengan lebih terarah dan bersesuaian dengan matlamat perniagaan anda.
             </p>
 
@@ -1111,7 +1166,7 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="contact-channel-label">Saluran WhatsApp Rasmi</div>
+                  <div class="contact-channel-label" data-i18n="contact_channel_wa">Saluran WhatsApp Rasmi</div>
                   <div class="contact-channel-value">+60 11-1188 6654</div>
                 </div>
               </div>
@@ -1124,7 +1179,7 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="contact-channel-label">E-mel Pertanyaan Korporat</div>
+                  <div class="contact-channel-label" data-i18n="contact_channel_email">E-mel Pertanyaan Korporat</div>
                   <div class="contact-channel-value">SMGMH23@GMAIL.COM</div>
                 </div>
               </div>
@@ -1138,14 +1193,14 @@
                   </svg>
                 </div>
                 <div>
-                  <div class="contact-channel-label">Kawasan Perkhidmatan</div>
-                  <div class="contact-channel-value">Kuala Lumpur & Lembah Klang, Malaysia</div>
+                  <div class="contact-channel-label" data-i18n="contact_channel_area">Kawasan Perkhidmatan</div>
+                  <div class="contact-channel-value" data-i18n="contact_channel_area_val">Kuala Lumpur & Lembah Klang, Malaysia</div>
                 </div>
               </div>
 
               <div style="margin-top: var(--space-xs);">
                 <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-full-mobile">
-                  <span>WHATSAPP REVO TERUS</span>
+                  <span data-i18n="contact_btn_direct_wa">WHATSAPP REVO TERUS</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
@@ -1154,8 +1209,6 @@
 
           <!-- Contact Form Box -->
           <div class="contact-form-wrap">
-            <!-- Flash Message from Session if redirect occurred -->
-                        
             <div id="formFeedback" class="form-feedback" role="alert"></div>
 
             <form id="revoContactForm" action="submit_enquiry.php" method="POST" novalidate>
@@ -1172,84 +1225,84 @@
               <div class="form-grid form-grid-2">
                 <!-- Name -->
                 <div class="form-group">
-                  <label for="name">Nama Penuh <span style="color:#C9A45C;">*</span></label>
-                  <input type="text" id="name" name="name" class="form-control" placeholder="cth. Encik Razak" required>
+                  <label for="name"><span data-i18n="form_name_label">Nama Penuh</span> <span style="color:#C9A45C;">*</span></label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="cth. Encik Razak" data-i18n-placeholder="form_name_ph" required>
                 </div>
 
                 <!-- Company -->
                 <div class="form-group">
-                  <label for="company">Nama Syarikat / Jenama <span style="color:#C9A45C;">*</span></label>
-                  <input type="text" id="company" name="company" class="form-control" placeholder="cth. Zenith Holdings Sdn Bhd" required>
+                  <label for="company"><span data-i18n="form_company_label">Nama Syarikat / Jenama</span> <span style="color:#C9A45C;">*</span></label>
+                  <input type="text" id="company" name="company" class="form-control" placeholder="cth. Zenith Holdings Sdn Bhd" data-i18n-placeholder="form_company_ph" required>
                 </div>
               </div>
 
               <div class="form-grid form-grid-2" style="margin-top: var(--space-md);">
                 <!-- Email -->
                 <div class="form-group">
-                  <label for="email">Alamat E-mel Korporat <span style="color:#C9A45C;">*</span></label>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="nama@syarikat.com.my" required>
+                  <label for="email"><span data-i18n="form_email_label">Alamat E-mel Korporat</span> <span style="color:#C9A45C;">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="nama@syarikat.com.my" data-i18n-placeholder="form_email_ph" required>
                 </div>
 
                 <!-- WhatsApp Number -->
                 <div class="form-group">
-                  <label for="phone">Nombor WhatsApp <span style="color:#C9A45C;">*</span></label>
-                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="cth. 012-3456789 atau +6011..." required>
+                  <label for="phone"><span data-i18n="form_phone_label">Nombor WhatsApp</span> <span style="color:#C9A45C;">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="cth. 012-3456789 atau +6011..." data-i18n-placeholder="form_phone_ph" required>
                 </div>
               </div>
 
               <div class="form-grid form-grid-2" style="margin-top: var(--space-md);">
                 <!-- Industry -->
                 <div class="form-group">
-                  <label for="industry">Kategori Industri <span style="color:#C9A45C;">*</span></label>
+                  <label for="industry"><span data-i18n="form_industry_label">Kategori Industri</span> <span style="color:#C9A45C;">*</span></label>
                   <select id="industry" name="industry" class="form-control" required>
-                    <option value="" disabled selected>Pilih Industri Anda</option>
-                    <option value="Hotels & Resorts">Hotels & Resorts</option>
+                    <option value="" disabled selected data-i18n="form_industry_default">Pilih Industri Anda</option>
+                    <option value="Hotels & Resorts" data-i18n="ind_4">Hotels & Resorts</option>
                     <option value="Tourism & Travel">Tourism & Travel</option>
-                    <option value="Property Development">Property Development</option>
-                    <option value="Automotive">Automotive</option>
-                    <option value="Banking & Finance">Banking & Finance</option>
-                    <option value="Luxury Brands">Luxury Brands</option>
-                    <option value="Food & Beverage">Food & Beverage</option>
-                    <option value="Technology">Technology</option>
-                    <option value="Corporate Companies">Corporate Companies</option>
-                    <option value="Events & Experiences">Events & Experiences</option>
-                    <option value="Lain-lain">Lain-lain Kategori</option>
+                    <option value="Property Development" data-i18n="ind_3">Property Development</option>
+                    <option value="Automotive" data-i18n="ind_2">Automotive</option>
+                    <option value="Banking & Finance" data-i18n="ind_5">Banking & Finance</option>
+                    <option value="Luxury Brands" data-i18n="ind_1">Luxury Brands</option>
+                    <option value="Food & Beverage" data-i18n="ind_6">Food & Beverage</option>
+                    <option value="Technology" data-i18n="ind_8">Technology</option>
+                    <option value="Corporate Companies" data-i18n="ind_9">Corporate Companies</option>
+                    <option value="Events & Experiences" data-i18n="ind_12">Events & Experiences</option>
+                    <option value="Lain-lain" data-i18n="form_industry_other">Lain-lain Kategori</option>
                   </select>
                 </div>
 
                 <!-- Estimated Budget (Optional) -->
                 <div class="form-group">
-                  <label for="budget">Anggaran Bajet Kempen <span class="optional">(Pilihan)</span></label>
+                  <label for="budget"><span data-i18n="form_budget_label">Anggaran Bajet Kempen</span> <span class="optional" data-i18n="form_budget_opt">(Pilihan)</span></label>
                   <select id="budget" name="budget" class="form-control">
-                    <option value="Belum ditentukan / Fleksibel">Belum ditentukan / Terbuka untuk cadangan</option>
-                    <option value="Bawah RM 5,000">Di bawah RM 5,000</option>
-                    <option value="RM 5,000 - RM 15,000">RM 5,000 – RM 15,000</option>
-                    <option value="RM 15,000 - RM 30,000">RM 15,000 – RM 30,000</option>
-                    <option value="RM 30,000 ke atas">RM 30,000 ke atas</option>
+                    <option value="Belum ditentukan / Fleksibel" data-i18n="form_budget_opt0">Belum ditentukan / Terbuka untuk cadangan</option>
+                    <option value="Bawah RM 5,000" data-i18n="form_budget_opt1">Di bawah RM 5,000</option>
+                    <option value="RM 5,000 - RM 15,000" data-i18n="form_budget_opt2">RM 5,000 – RM 15,000</option>
+                    <option value="RM 15,000 - RM 30,000" data-i18n="form_budget_opt3">RM 15,000 – RM 30,000</option>
+                    <option value="RM 30,000 ke atas" data-i18n="form_budget_opt4">RM 30,000 ke atas</option>
                   </select>
                 </div>
               </div>
 
               <!-- Campaign Objectives -->
               <div class="form-group" style="margin-top: var(--space-md);">
-                <label for="objectives">Objektif Kempen</label>
-                <input type="text" id="objectives" name="objectives" class="form-control" placeholder="cth. Pelancaran produk baharu / Bina kesedaran jenama di KL">
+                <label for="objectives" data-i18n="form_obj_label">Objektif Kempen</label>
+                <input type="text" id="objectives" name="objectives" class="form-control" placeholder="cth. Pelancaran produk baharu / Bina kesedaran jenama di KL" data-i18n-placeholder="form_obj_ph">
               </div>
 
               <!-- Message -->
               <div class="form-group" style="margin-top: var(--space-md);">
-                <label for="message">Mesej / Keperluan Tambahan</label>
-                <textarea id="message" name="message" class="form-control" placeholder="Kongsikan sebarang perincian kempen atau pertanyaan yang ingin anda bincangkan..."></textarea>
+                <label for="message" data-i18n="form_msg_label">Mesej / Keperluan Tambahan</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Kongsikan sebarang perincian kempen atau pertanyaan yang ingin anda bincangkan..." data-i18n-placeholder="form_msg_ph"></textarea>
               </div>
 
               <div style="margin-top: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-sm);">
                 <button type="submit" id="submitBtn" class="btn btn-primary btn-full-mobile">
-                  <span>HANTAR PERTANYAAN</span>
+                  <span data-i18n="form_submit_btn">HANTAR PERTANYAAN</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
                 <div class="microcopy" style="justify-content: center;">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                  <span>Maklumat anda dilindungi dan hanya digunakan untuk tujuan perbincangan kempen rasmi.</span>
+                  <span data-i18n="form_privacy_note">Maklumat anda dilindungi dan hanya digunakan untuk tujuan perbincangan kempen rasmi.</span>
                 </div>
               </div>
             </form>
@@ -1263,8 +1316,8 @@
   <!-- ========================================================================
        13. FLOATING WHATSAPP BUTTON (SAFE FROM BOTTOM EDGE)
        ======================================================================== -->
-  <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Berbual dengan Pasukan REVO di WhatsApp">
-    <span class="floating-wa-badge">Bincang Kempen di WhatsApp</span>
+  <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Berbual dengan Pasukan REVO di WhatsApp" data-i18n-aria="floating_wa_aria">
+    <span class="floating-wa-badge" data-i18n="floating_wa_badge">Bincang Kempen di WhatsApp</span>
     <div class="floating-wa-btn" aria-hidden="true">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -1294,7 +1347,7 @@
             </div>
           </div>
           <div class="footer-tagline-main">“YOUR BRAND. OUR JOURNEY.”</div>
-          <p style="font-size: 0.85rem; color: var(--c-silver);">
+          <p style="font-size: 0.85rem; color: var(--c-silver);" data-i18n="footer_tagline">
             Premium Mobile Advertising | Brand Visibility | Business Opportunities.<br>
             Menyediakan medium komunikasi digital eksklusif di dalam kenderaan Toyota Alphard & Vellfire di Malaysia.
           </p>
@@ -1302,22 +1355,22 @@
 
         <!-- Quick Links -->
         <div>
-          <div class="footer-col-title">Navigasi Utama</div>
+          <div class="footer-col-title" data-i18n="footer_col_nav">Navigasi Utama</div>
           <ul class="footer-links-list">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About REVO</a></li>
-            <li><a href="#network">Our Network</a></li>
-            <li><a href="#solutions">Advertising Solutions</a></li>
-            <li><a href="#industries">Industries We Serve</a></li>
-            <li><a href="#packages">Campaign Packages</a></li>
-            <li><a href="#contact">Contact & Enquiry</a></li>
+            <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+            <li><a href="#about" data-i18n="nav_about">About REVO</a></li>
+            <li><a href="#network" data-i18n="nav_network">Our Network</a></li>
+            <li><a href="#solutions" data-i18n="nav_solutions">Advertising Solutions</a></li>
+            <li><a href="#industries" data-i18n="nav_industries">Industries We Serve</a></li>
+            <li><a href="#packages" data-i18n="nav_packages">Campaign Packages</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact & Enquiry</a></li>
             <li><a href="admin/login.php" style="color: rgba(201,164,92,0.6);">Admin Portal</a></li>
           </ul>
         </div>
 
         <!-- Contacts -->
         <div>
-          <div class="footer-col-title">Hubungi Kami</div>
+          <div class="footer-col-title" data-i18n="footer_col_contact">Hubungi Kami</div>
           <ul class="footer-links-list">
             <li>
               <strong style="color: var(--c-ivory);">WhatsApp:</strong><br>
@@ -1328,8 +1381,8 @@
               <a href="mailto:SMGMH23@GMAIL.COM">SMGMH23@GMAIL.COM</a>
             </li>
             <li style="margin-top: 6px;">
-              <strong style="color: var(--c-ivory);">Pasaran:</strong><br>
-              <span>Kuala Lumpur & Lembah Klang, Malaysia</span>
+              <strong style="color: var(--c-ivory);" data-i18n="footer_market_label">Pasaran:</strong><br>
+              <span data-i18n="contact_channel_area_val">Kuala Lumpur & Lembah Klang, Malaysia</span>
             </li>
             <li style="margin-top: 6px;">
               <strong style="color: var(--c-ivory);">Domain:</strong><br>
@@ -1340,13 +1393,13 @@
       </div>
 
       <div class="footer-bottom">
-        <div>
+        <div data-i18n="footer_copy">
           &copy; 2026 REVO LUX MEDIA. Hak cipta terpelihara.
         </div>
         <div style="display: flex; gap: var(--space-md);">
-          <a href="#faq" class="btn-text-link" style="font-size: 0.775rem;">Soalan Lazim (FAQ)</a>
+          <a href="#faq" class="btn-text-link" style="font-size: 0.775rem;" data-i18n="footer_faq_link">Soalan Lazim (FAQ)</a>
           <span style="color: var(--c-silver-dark);">|</span>
-          <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn-text-link" style="font-size: 0.775rem;">Sembang WhatsApp</a>
+          <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn-text-link" style="font-size: 0.775rem;" data-i18n="footer_wa_link">Sembang WhatsApp</a>
         </div>
       </div>
     </div>
@@ -1358,7 +1411,7 @@
   <div class="revo-modal-overlay" id="solutionModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="revo-modal-container">
       <div class="modal-header">
-        <h3 class="modal-title" id="modalTitle">Spesifikasi Format Iklan</h3>
+        <h3 class="modal-title" id="modalTitle" data-i18n="modal_main_title">Spesifikasi Format Iklan</h3>
         <button type="button" class="modal-close-btn" aria-label="Tutup Tetingkap">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
@@ -1367,16 +1420,17 @@
         <!-- Injected via JavaScript -->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline btn-sm" id="modalCloseFooter">Tutup</button>
+        <button type="button" class="btn btn-outline btn-sm" id="modalCloseFooter" data-i18n="modal_close_btn">Tutup</button>
         <a href="https://wa.me/601111886654?text=Salam%20REVO%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20peluang%20pengiklanan%20melalui%20Toyota%20Alphard%20dan%20Toyota%20Vellfire.%20Boleh%20kongsikan%20maklumat%20kempen%20dan%20pakej%20yang%20tersedia%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modalWaBtn">
-          <span>Bincang Format Ini di WhatsApp</span>
+          <span data-i18n="modal_wa_btn">Bincang Format Ini di WhatsApp</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- JavaScript: i18n Language Engine & Main Interactions -->
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

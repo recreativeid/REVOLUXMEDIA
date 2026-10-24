@@ -209,9 +209,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalWaBtn = document.querySelector('#modalWaBtn');
   const modalCloseBtn = document.querySelector('.modal-close-btn');
   const modalCloseFooterBtn = document.querySelector('#modalCloseFooter');
+  let activeModalKey = null;
 
   const openSolutionModal = (solutionKey) => {
-    const data = solutionSpecs[solutionKey];
+    activeModalKey = solutionKey;
+    const data = (window.RevoI18n && window.RevoI18n.getModalSpec)
+      ? window.RevoI18n.getModalSpec(solutionKey)
+      : (solutionSpecs[solutionKey] || null);
+
     if (!data || !modalOverlay) return;
 
     modalTitle.textContent = data.title;
@@ -227,6 +232,13 @@ document.addEventListener('DOMContentLoaded', () => {
     modalOverlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   };
+
+  // Re-render modal if open when language changes
+  window.addEventListener('revo:langchange', () => {
+    if (modalOverlay && modalOverlay.classList.contains('open') && activeModalKey) {
+      openSolutionModal(activeModalKey);
+    }
+  });
 
   const closeModal = () => {
     if (!modalOverlay) return;
@@ -272,13 +284,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Set Loading State
       const originalBtnText = submitBtn.innerHTML;
+      const submittingText = (window.RevoI18n ? window.RevoI18n.t('form_submitting', 'Menghantar...') : 'Menghantar...');
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
         <svg style="animation: spin 1s linear infinite; width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
           <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
         </svg>
-        <span>Menghantar...</span>
+        <span>${submittingText}</span>
       `;
 
       try {
@@ -295,12 +308,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok) {
           const data = await response.json();
           if (data.success) {
+            const successTitle = (window.RevoI18n ? window.RevoI18n.t('form_success_title', 'Permintaan Berjaya Dihantar!') : 'Permintaan Berjaya Dihantar!');
+            const waBtnText = (window.RevoI18n ? window.RevoI18n.t('form_success_wa_btn', 'Teruskan Berbual di WhatsApp') : 'Teruskan Berbual di WhatsApp');
             formFeedback.className = 'form-feedback success';
             formFeedback.innerHTML = `
-              <strong>Permintaan Berjaya Dihantar!</strong><br>
+              <strong>${successTitle}</strong><br>
               ${data.message}<br><br>
               <a href="${data.wa_url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top: 8px;">
-                Teruskan Berbual di WhatsApp
+                ${waBtnText}
               </a>
             `;
             contactForm.reset();
@@ -319,14 +334,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return;
           } else {
+            const errPrefix = (window.RevoI18n ? window.RevoI18n.t('form_err_prefix', 'Ralat:') : 'Ralat:');
             formFeedback.className = 'form-feedback error';
-            formFeedback.innerHTML = `<strong>Ralat:</strong> ${data.message || 'Sila semak maklumat yang dimasukkan dan cuba lagi.'}`;
+            formFeedback.innerHTML = `<strong>${errPrefix}</strong> ${data.message || 'Sila semak maklumat yang dimasukkan dan cuba lagi.'}`;
             return;
           }
         }
         throw new Error('Static host or server error');
       } catch (err) {
         // Fallback for static environments (GitHub Pages): open WhatsApp directly with prefilled parameters
+        const isIndonesian = (window.RevoI18n && window.RevoI18n.getLanguage() === 'id');
         const name = contactForm.querySelector('[name="name"]')?.value || '';
         const company = contactForm.querySelector('[name="company"]')?.value || '';
         const phone = contactForm.querySelector('[name="phone"]')?.value || '';
@@ -336,25 +353,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const userMsg = contactForm.querySelector('[name="message"]')?.value || '';
 
         const lines = [
-          'Salam REVO LUX MEDIA,',
-          'Saya berminat membuat tempahan/pertanyaan pengiklanan Alphard & Vellfire:',
-          `- Nama: ${name}`,
-          `- Syarikat: ${company || '-'}`,
-          `- Telefon: ${phone}`,
-          `- Industri: ${industry || '-'}`,
-          `- Anggaran Bajet: ${budget || '-'}`,
-          `- Objektif: ${objectives || '-'}`
+          isIndonesian ? 'Halo REVO LUX MEDIA,' : 'Salam REVO LUX MEDIA,',
+          isIndonesian ? 'Saya berminat membuat pemesanan/pertanyaan periklanan Alphard & Vellfire:' : 'Saya berminat membuat tempahan/pertanyaan pengiklanan Alphard & Vellfire:',
+          `- ${isIndonesian ? 'Nama' : 'Nama'}: ${name}`,
+          `- ${isIndonesian ? 'Perusahaan' : 'Syarikat'}: ${company || '-'}`,
+          `- ${isIndonesian ? 'Telepon' : 'Telefon'}: ${phone}`,
+          `- ${isIndonesian ? 'Industri' : 'Industri'}: ${industry || '-'}`,
+          `- ${isIndonesian ? 'Perkiraan Anggaran' : 'Anggaran Bajet'}: ${budget || '-'}`,
+          `- ${isIndonesian ? 'Tujuan' : 'Objektif'}: ${objectives || '-'}`
         ];
-        if (userMsg) lines.push(`- Mesej Tambahan: ${userMsg}`);
+        if (userMsg) lines.push(`- ${isIndonesian ? 'Pesan Tambahan' : 'Mesej Tambahan'}: ${userMsg}`);
 
         const fallbackWaUrl = 'https://wa.me/601111886654?text=' + encodeURIComponent(lines.join('\n'));
 
+        const fallbackTitle = isIndonesian ? 'Pertanyaan Telah Dirumuskan!' : 'Pertanyaan Telah Dirumuskan!';
+        const fallbackSub = isIndonesian ? 'Menyambungkan Anda langsung ke konsultan media REVO di WhatsApp...' : 'Menyambungkan anda terus ke perunding media REVO di WhatsApp...';
+        const fallbackBtn = isIndonesian ? 'Buka WhatsApp Sekarang' : 'Buka WhatsApp Sekarang';
+
         formFeedback.className = 'form-feedback success';
         formFeedback.innerHTML = `
-          <strong>Pertanyaan Telah Dirumuskan!</strong><br>
-          Menyambungkan anda terus ke perunding media REVO di WhatsApp...<br><br>
+          <strong>${fallbackTitle}</strong><br>
+          ${fallbackSub}<br><br>
           <a href="${fallbackWaUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top: 8px;">
-            Buka WhatsApp Sekarang
+            ${fallbackBtn}
           </a>
         `;
         setTimeout(() => {
