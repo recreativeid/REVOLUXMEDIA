@@ -1051,7 +1051,10 @@ button, input, select, textarea {
   overflow: hidden;
   border: 1px solid rgba(201, 164, 92, 0.35);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
-  max-height: 480px;
+  aspect-ratio: 2/3;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
   background: var(--c-graphite);
   transition: all var(--transition-base);
 }
@@ -1066,6 +1069,8 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform var(--transition-slow);
 }
 
@@ -3066,7 +3071,7 @@ textarea.form-control {
 
 @media (min-width: 992px) {
   .experience-showcase-grid {
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: 340px 1fr;
     gap: var(--space-2xl);
   }
 }
@@ -3079,6 +3084,9 @@ textarea.form-control {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 35px rgba(201, 164, 92, 0.15);
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 992px) {
@@ -3132,7 +3140,7 @@ textarea.form-control {
 .theater-screen-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
   background: #000;
   overflow: hidden;
   cursor: pointer;
@@ -3141,7 +3149,8 @@ textarea.form-control {
 .theater-screen-box video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000;
   display: block;
 }
 
@@ -3373,7 +3382,7 @@ textarea.form-control {
 .poster-media-preview {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 2/3;
   background: #000;
   overflow: hidden;
 }
@@ -3381,8 +3390,8 @@ textarea.form-control {
 .poster-media-preview img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  background: #000;
   display: block;
   transition: transform var(--transition-slow);
 }
@@ -3587,7 +3596,7 @@ textarea.form-control {
 
 @media (min-width: 900px) {
   .advantage-media-showcase {
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 320px 1fr;
     gap: var(--space-2xl);
     padding: 30px;
   }
@@ -3596,18 +3605,22 @@ textarea.form-control {
 .advantage-video-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  max-width: 320px;
+  aspect-ratio: 9/16;
+  margin: 0 auto;
   background: #000;
   border-radius: var(--radius-lg);
+  border: 1px solid rgba(201, 164, 92, 0.35);
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
 }
 
 .advantage-video-frame video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000;
   display: block;
 }
 
@@ -3646,83 +3659,82 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   CUSTOMER JOURNEY PHOTOGRAPHIC MOSAIC BANNER
+   CUSTOMER JOURNEY TOUCHPOINTS SHOWCASE (SPLIT POSTER + 6 TOUCHPOINT CARDS)
    ========================================================================== */
-.touchpoints-visual-banner {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16/6;
-  max-height: 380px;
-  min-height: 220px;
-  background: #000;
-  border: 1px solid rgba(201, 164, 92, 0.3);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  margin-bottom: var(--space-xl);
-  cursor: pointer;
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7);
+.touchpoints-showcase-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
 }
 
-.touchpoints-visual-banner img {
+@media (min-width: 992px) {
+  .touchpoints-showcase-split {
+    grid-template-columns: 380px 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+.touchpoints-poster-frame {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  aspect-ratio: 2/3;
+  background: #0f1217;
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(201, 164, 92, 0.12);
+  cursor: pointer;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.touchpoints-poster-frame:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 164, 92, 0.65);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(201, 164, 92, 0.22);
+}
+
+.touchpoints-poster-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
+  object-fit: contain;
   display: block;
+  background: #000;
   transition: transform var(--transition-slow);
 }
 
-.touchpoints-visual-banner:hover img {
-  transform: scale(1.03);
+.touchpoints-poster-frame:hover img {
+  transform: scale(1.02);
 }
 
-.touchpoints-banner-overlay {
+.touchpoints-poster-zoom-bar {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(5, 6, 8, 0.2) 0%, rgba(5, 6, 8, 0.88) 100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, rgba(5, 6, 8, 0.2) 0%, rgba(5, 6, 8, 0.92) 100%);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 24px 28px;
-  z-index: 2;
-}
-
-.touchpoints-banner-badge {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--c-gold-metallic);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.touchpoints-banner-title {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--c-white);
-  line-height: 1.3;
-  margin-bottom: 6px;
-}
-
-.touchpoints-banner-desc {
-  font-size: 0.8rem;
-  color: var(--c-silver);
-  line-height: 1.5;
-  margin-bottom: 10px;
-  max-width: 800px;
-}
-
-.touchpoints-zoom-hint {
-  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--c-gold-champagne);
-  text-transform: uppercase;
   letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+@media (min-width: 992px) {
+  .touchpoints-showcase-split .touchpoints-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0;
+    gap: var(--space-md);
+  }
 }
 
 /* ==========================================================================
@@ -3738,7 +3750,7 @@ textarea.form-control {
 
 @media (min-width: 992px) {
   .industry-showcase-split {
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 340px 1fr;
     gap: var(--space-2xl);
   }
 }
@@ -3751,12 +3763,15 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .industry-media-screen {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 9/16;
   background: #000;
   overflow: hidden;
   cursor: pointer;
@@ -3765,7 +3780,8 @@ textarea.form-control {
 .industry-media-screen video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000;
   display: block;
 }
 
@@ -3835,7 +3851,7 @@ textarea.form-control {
 .faq-media-thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   background: #000;
   overflow: hidden;
 }

@@ -523,9 +523,9 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
           </div>
         </div>
 
-        <!-- Customer Journey Touchpoints Grid (from PDF Page 8 & 12) -->
+        <!-- Customer Journey Touchpoints Showcase (Full HD Portrait Poster + 6 Touchpoint Cards) -->
         <div style="margin-top: var(--space-3xl); margin-bottom: var(--space-2xl);">
-          <div class="section-header text-center" style="margin-bottom: var(--space-lg);">
+          <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
             <div class="section-tag" data-i18n="tp_tag">TITIK SENTUHAN AUDIENS</div>
             <h3 data-i18n="tp_title" style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 700; color: var(--c-white); margin-bottom: 8px;">
               The Customer Journey: From First Impression to Lasting Impact
@@ -535,85 +535,84 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
             </p>
           </div>
 
-          <!-- Photographic Mosaic Banner: 6 Real Touchpoints in Action -->
-          <div class="touchpoints-visual-banner" data-lightbox-image="assets/images/revo-touchpoints-grid.jpg" data-lightbox-title="Visual Sebenar 6 Titik Sentuhan Penumpang VIP" data-lightbox-desc="KLIA Transfer • Pusat Bandar KLCC • Hotel 5-Bintang • Pusat Beli-Belah • Pameran Korporat • Delegasi Eksekutif">
-            <img src="assets/images/revo-touchpoints-grid.jpg" alt="Visual 6 Titik Sentuhan Penumpang VIP REVO" loading="lazy">
-            <div class="touchpoints-banner-overlay">
-              <span class="touchpoints-banner-badge" data-i18n="tp_banner_badge">DOKUMENTASI FOTOGRAFI SEBENAR</span>
-              <h4 class="touchpoints-banner-title" data-i18n="tp_banner_title">Liputan Menyeluruh Laluan Korporat &amp; Pelancongan Mewah</h4>
-              <p class="touchpoints-banner-desc" data-i18n="tp_banner_desc">Fotografi sebenar 6 koridor tumpuan: Ketibaan KLIA, Hab Korporat KLCC, Hotel 5-Bintang, Pusat Beli-Belah Utama, Konvensyen &amp; Delegasi VIP.</p>
-              <span class="touchpoints-zoom-hint" data-i18n="tp_banner_hint">
+          <div class="touchpoints-showcase-split">
+            <!-- Left: Full HD Touchpoints Photographic Poster (Exact 2:3 Ratio, 100% Uncropped) -->
+            <div class="touchpoints-poster-frame" data-lightbox-image="assets/images/revo-touchpoints-grid.jpg" data-lightbox-title="Visual Sebenar 6 Titik Sentuhan Penumpang VIP" data-lightbox-desc="Fotografi sebenar 6 koridor: KLIA Transfer, Pusat Bandar KLCC, Hotel 5-Bintang, Pusat Beli-Belah, Event & Pameran, Delegasi Eksekutif.">
+              <span class="media-card-badge" data-i18n="tp_banner_badge">DOKUMENTASI FOTOGRAFI SEBENAR</span>
+              <img src="assets/images/revo-touchpoints-grid.jpg" alt="Visual 6 Titik Sentuhan Penumpang VIP REVO" loading="lazy">
+              <div class="touchpoints-poster-zoom-bar">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-                Klik untuk paparan skrin penuh HD
-              </span>
-            </div>
-          </div>
-
-          <div class="touchpoints-grid">
-            <div class="touchpoint-card">
-              <span class="touchpoint-num" data-i18n="tp1_num">TOUCHPOINT 01</span>
-              <div class="touchpoint-header-wrap">
-                <div class="touchpoint-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
-                </div>
-                <h4 class="touchpoint-title" data-i18n="tp1_title">ARRIVAL &amp; KLIA</h4>
+                <span data-i18n="tp_banner_hint">Klik untuk paparan skrin penuh HD</span>
               </div>
-              <p class="touchpoint-desc" data-i18n="tp1_desc">Sambutan eksklusif lapangan terbang KLIA &amp; KLIA2. Menemui pelancong dan delegasi VIP sebaik tiba ke Malaysia.</p>
             </div>
 
-            <div class="touchpoint-card">
-              <span class="touchpoint-num" data-i18n="tp2_num">TOUCHPOINT 02</span>
-              <div class="touchpoint-header-wrap">
-                <div class="touchpoint-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 011-1h10a1 1 0 011 1v3M9 11h2M9 15h2M13 11h2M13 15h2"/></svg>
+            <!-- Right: The 6 Touchpoint Breakdown Cards -->
+            <div class="touchpoints-grid">
+              <div class="touchpoint-card">
+                <span class="touchpoint-num" data-i18n="tp1_num">TOUCHPOINT 01</span>
+                <div class="touchpoint-header-wrap">
+                  <div class="touchpoint-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
+                  </div>
+                  <h4 class="touchpoint-title" data-i18n="tp1_title">ARRIVAL &amp; KLIA</h4>
                 </div>
-                <h4 class="touchpoint-title" data-i18n="tp2_title">HOTEL &amp; HOSPITALITY</h4>
+                <p class="touchpoint-desc" data-i18n="tp1_desc">Sambutan eksklusif lapangan terbang KLIA &amp; KLIA2. Menemui pelancong dan delegasi VIP sebaik tiba ke Malaysia.</p>
               </div>
-              <p class="touchpoint-desc" data-i18n="tp2_desc">Perjalanan ke hotel 5-bintang &amp; suite kediaman mewah. Berhubung dengan tetamu semasa suasana santai dan istirehat.</p>
-            </div>
 
-            <div class="touchpoint-card">
-              <span class="touchpoint-num" data-i18n="tp3_num">TOUCHPOINT 03</span>
-              <div class="touchpoint-header-wrap">
-                <div class="touchpoint-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              <div class="touchpoint-card">
+                <span class="touchpoint-num" data-i18n="tp2_num">TOUCHPOINT 02</span>
+                <div class="touchpoint-header-wrap">
+                  <div class="touchpoint-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 011-1h10a1 1 0 011 1v3M9 11h2M9 15h2M13 11h2M13 15h2"/></svg>
+                  </div>
+                  <h4 class="touchpoint-title" data-i18n="tp2_title">HOTEL &amp; HOSPITALITY</h4>
                 </div>
-                <h4 class="touchpoint-title" data-i18n="tp3_title">CORPORATE &amp; BUSINESS</h4>
+                <p class="touchpoint-desc" data-i18n="tp2_desc">Perjalanan ke hotel 5-bintang &amp; suite kediaman mewah. Berhubung dengan tetamu semasa suasana santai dan istirehat.</p>
               </div>
-              <p class="touchpoint-desc" data-i18n="tp3_desc">Urusan persidangan, mesyuarat perniagaan dan pergerakan korporat di menara komersial utama Lembah Klang.</p>
-            </div>
 
-            <div class="touchpoint-card">
-              <span class="touchpoint-num" data-i18n="tp4_num">TOUCHPOINT 04</span>
-              <div class="touchpoint-header-wrap">
-                <div class="touchpoint-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <div class="touchpoint-card">
+                <span class="touchpoint-num" data-i18n="tp3_num">TOUCHPOINT 03</span>
+                <div class="touchpoint-header-wrap">
+                  <div class="touchpoint-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                  </div>
+                  <h4 class="touchpoint-title" data-i18n="tp3_title">CORPORATE &amp; BUSINESS</h4>
                 </div>
-                <h4 class="touchpoint-title" data-i18n="tp4_title">EXECUTIVE &amp; VIP</h4>
+                <p class="touchpoint-desc" data-i18n="tp3_desc">Urusan persidangan, mesyuarat perniagaan dan pergerakan korporat di menara komersial utama Lembah Klang.</p>
               </div>
-              <p class="touchpoint-desc" data-i18n="tp4_desc">Individu bernilai bersih tinggi (HNWIs), pembuat keputusan, pengarah syarikat dan delegasi kehormat peribadi.</p>
-            </div>
 
-            <div class="touchpoint-card">
-              <span class="touchpoint-num" data-i18n="tp5_num">TOUCHPOINT 05</span>
-              <div class="touchpoint-header-wrap">
-                <div class="touchpoint-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <div class="touchpoint-card">
+                <span class="touchpoint-num" data-i18n="tp4_num">TOUCHPOINT 04</span>
+                <div class="touchpoint-header-wrap">
+                  <div class="touchpoint-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </div>
+                  <h4 class="touchpoint-title" data-i18n="tp4_title">EXECUTIVE &amp; VIP</h4>
                 </div>
-                <h4 class="touchpoint-title" data-i18n="tp5_title">TOURISTS &amp; GLOBAL</h4>
+                <p class="touchpoint-desc" data-i18n="tp4_desc">Individu bernilai bersih tinggi (HNWIs), pembuat keputusan, pengarah syarikat dan delegasi kehormat peribadi.</p>
               </div>
-              <p class="touchpoint-desc" data-i18n="tp5_desc">Pelawat antarabangsa yang mencari pengalaman terbaik, jenama barangan mewah, dan perkhidmatan berprestij.</p>
-            </div>
 
-            <div class="touchpoint-card">
-              <span class="touchpoint-num" data-i18n="tp6_num">TOUCHPOINT 06</span>
-              <div class="touchpoint-header-wrap">
-                <div class="touchpoint-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <div class="touchpoint-card">
+                <span class="touchpoint-num" data-i18n="tp5_num">TOUCHPOINT 05</span>
+                <div class="touchpoint-header-wrap">
+                  <div class="touchpoint-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <h4 class="touchpoint-title" data-i18n="tp5_title">TOURISTS &amp; GLOBAL</h4>
                 </div>
-                <h4 class="touchpoint-title" data-i18n="tp6_title">FAMILY TRAVEL</h4>
+                <p class="touchpoint-desc" data-i18n="tp5_desc">Pelawat antarabangsa yang mencari pengalaman terbaik, jenama barangan mewah, dan perkhidmatan berprestij.</p>
               </div>
-              <p class="touchpoint-desc" data-i18n="tp6_desc">Perjalanan keluarga berprofil tinggi yang menikmati keselesaan ruang 7 &amp; 8 tempat duduk Alphard &amp; Vellfire.</p>
+
+              <div class="touchpoint-card">
+                <span class="touchpoint-num" data-i18n="tp6_num">TOUCHPOINT 06</span>
+                <div class="touchpoint-header-wrap">
+                  <div class="touchpoint-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <h4 class="touchpoint-title" data-i18n="tp6_title">FAMILY TRAVEL</h4>
+                </div>
+                <p class="touchpoint-desc" data-i18n="tp6_desc">Perjalanan keluarga berprofil tinggi yang menikmati keselesaan ruang 7 &amp; 8 tempat duduk Alphard &amp; Vellfire.</p>
+              </div>
             </div>
           </div>
         </div>
