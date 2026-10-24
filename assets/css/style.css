@@ -462,7 +462,7 @@ button, input, select, textarea {
 .desktop-nav {
   display: none;
   align-items: center;
-  gap: var(--space-lg);
+  gap: clamp(14px, 1.8vw, 24px);
 }
 
 .nav-link {
@@ -472,6 +472,8 @@ button, input, select, textarea {
   letter-spacing: 0.03em;
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
 }
 
 .nav-link::after {

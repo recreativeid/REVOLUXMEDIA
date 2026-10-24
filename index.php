@@ -86,15 +86,12 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
         </div>
       </a>
 
-      <!-- Desktop Nav -->
+      <!-- Desktop Nav (6 Core Essential Items) -->
       <nav class="desktop-nav" aria-label="Navigasi Utama">
         <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
         <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
         <a href="#advantage" class="nav-link" data-i18n="nav_advantage">Advantage</a>
-        <a href="#how-it-works" class="nav-link" data-i18n="nav_touchpoints">Touchpoints</a>
         <a href="#solutions" class="nav-link" data-i18n="nav_solutions">Solutions</a>
-        <a href="#network" class="nav-link" data-i18n="nav_network">Our Network</a>
-        <a href="#industries" class="nav-link" data-i18n="nav_industries">Industries</a>
         <a href="#packages" class="nav-link" data-i18n="nav_packages">Packages</a>
         <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
       </nav>
@@ -189,38 +186,14 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
         </a>
       </li>
       <li>
-        <a href="#how-it-works" class="mobile-nav-link">
-          <span data-i18n="nav_touchpoints">Touchpoints</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        </a>
-      </li>
-      <li>
         <a href="#solutions" class="mobile-nav-link">
           <span data-i18n="nav_solutions">Solutions</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
       <li>
-        <a href="#network" class="mobile-nav-link">
-          <span data-i18n="nav_network">Our Network</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="#industries" class="mobile-nav-link">
-          <span data-i18n="nav_industries">Industries</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        </a>
-      </li>
-      <li>
         <a href="#packages" class="mobile-nav-link">
           <span data-i18n="nav_packages">Packages</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="#faq" class="mobile-nav-link">
-          <span data-i18n="nav_faq">FAQ</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
       </li>
