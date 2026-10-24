@@ -391,103 +391,261 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ========================================================================
-  // 6. MULTIMEDIA LIGHTBOX & GALLERY FILTERING
+  // 6. INTERACTIVE EXPERIENCE SHOWCASE & INLINE VIDEO CONTROLLER
   // ========================================================================
+  // A. Mode Tabs (Perjalanan 4 Langkah vs Infografik Rasmi)
+  const expModeBtns = document.querySelectorAll('.exp-mode-btn');
+  const expJourneyPanel = document.getElementById('expJourneyPanel');
+  const expPostersPanel = document.getElementById('expPostersPanel');
+
+  const switchExpMode = (mode) => {
+    expModeBtns.forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-exp-mode') === mode);
+    });
+    if (mode === 'posters') {
+      expJourneyPanel?.classList.remove('active');
+      expPostersPanel?.classList.add('active');
+      if (theaterVideo && !theaterVideo.paused) {
+        theaterVideo.pause();
+      }
+    } else {
+      expPostersPanel?.classList.remove('active');
+      expJourneyPanel?.classList.add('active');
+    }
+  };
+
+  expModeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.getAttribute('data-exp-mode') || 'journey';
+      switchExpMode(mode);
+    });
+  });
+
+  // B. Cinema Theater Console & Step Cards
+  const theaterVideo = document.getElementById('theaterVideo');
+  const theaterScreenBox = document.getElementById('theaterScreenBox');
+  const theaterPlayOverlay = document.getElementById('theaterPlayOverlay');
+  const theaterStepBadge = document.getElementById('theaterStepBadge');
+  const theaterTitle = document.getElementById('theaterTitle');
+  const theaterMetric = document.getElementById('theaterMetric');
+  const stepCards = document.querySelectorAll('.exp-step-card');
+
+  const playTheaterVideo = () => {
+    if (!theaterVideo) return;
+    theaterVideo.controls = true;
+    const playPromise = theaterVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        theaterPlayOverlay?.classList.add('playing');
+      }).catch(() => {
+        theaterVideo.controls = true;
+      });
+    }
+  };
+
+  const selectStep = (card, autoPlay = false) => {
+    if (!card) return;
+    stepCards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+
+    const videoSrc = card.getAttribute('data-video');
+    const badgeKey = card.getAttribute('data-badge-key');
+    const titleKey = card.getAttribute('data-title-key');
+    const metricKey = card.getAttribute('data-metric-key');
+
+    if (theaterVideo && videoSrc) {
+      theaterVideo.pause();
+      theaterVideo.controls = false;
+      theaterVideo.src = videoSrc + '#t=1';
+      theaterVideo.load();
+      theaterPlayOverlay?.classList.remove('playing');
+    }
+
+    if (theaterStepBadge && badgeKey) {
+      theaterStepBadge.setAttribute('data-i18n', badgeKey);
+      theaterStepBadge.textContent = window.RevoI18n ? window.RevoI18n.t(badgeKey) : (card.querySelector('.exp-step-nav-tag')?.textContent || '');
+    }
+    if (theaterTitle && titleKey) {
+      theaterTitle.setAttribute('data-i18n', titleKey);
+      theaterTitle.textContent = window.RevoI18n ? window.RevoI18n.t(titleKey) : (card.querySelector('.exp-step-card-title')?.textContent || '');
+    }
+    if (theaterMetric && metricKey) {
+      theaterMetric.setAttribute('data-i18n', metricKey);
+      theaterMetric.textContent = window.RevoI18n ? window.RevoI18n.t(metricKey) : (card.querySelector('.exp-metric-pill')?.textContent || '');
+    }
+
+    if (autoPlay) {
+      playTheaterVideo();
+    }
+  };
+
+  theaterPlayOverlay?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    playTheaterVideo();
+  });
+
+  theaterVideo?.addEventListener('play', () => {
+    theaterPlayOverlay?.classList.add('playing');
+    theaterVideo.controls = true;
+  });
+
+  theaterVideo?.addEventListener('pause', () => {
+    if (theaterVideo.ended) {
+      theaterPlayOverlay?.classList.remove('playing');
+      theaterVideo.controls = false;
+    }
+  });
+
+  theaterVideo?.addEventListener('ended', () => {
+    theaterPlayOverlay?.classList.remove('playing');
+    theaterVideo.controls = false;
+  });
+
+  stepCards.forEach(card => {
+    card.addEventListener('click', () => {
+      selectStep(card, false);
+    });
+  });
+
+  // Re-sync active step translations on language switch
+  window.addEventListener('revo:langchange', () => {
+    const activeCard = document.querySelector('.exp-step-card.active');
+    if (activeCard) {
+      const badgeKey = activeCard.getAttribute('data-badge-key');
+      const titleKey = activeCard.getAttribute('data-title-key');
+      const metricKey = activeCard.getAttribute('data-metric-key');
+      if (theaterStepBadge && badgeKey && window.RevoI18n) {
+        theaterStepBadge.textContent = window.RevoI18n.t(badgeKey);
+      }
+      if (theaterTitle && titleKey && window.RevoI18n) {
+        theaterTitle.textContent = window.RevoI18n.t(titleKey);
+      }
+      if (theaterMetric && metricKey && window.RevoI18n) {
+        theaterMetric.textContent = window.RevoI18n.t(metricKey);
+      }
+    }
+  });
+
+  // C. Hero Video Watch Button (Plays inline directly in experience section)
+  const heroWatchBtn = document.getElementById('heroWatchVideoBtn');
+  heroWatchBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const expSection = document.getElementById('experience');
+    if (expSection) {
+      expSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      switchExpMode('journey');
+      const firstStep = document.querySelector('.exp-step-card[data-step="1"]');
+      if (firstStep) {
+        selectStep(firstStep, true);
+      }
+    }
+  });
+
+  // D. Solutions Tablet Live Play (Plays Directly Inline inside tablet frame)
+  const solutionsPlayBtn = document.getElementById('solutionsPlayBtn');
+  const solutionsTabletFrame = document.getElementById('solutionsTabletFrame');
+  const solutionsTabletVideo = document.getElementById('solutionsTabletVideo');
+  const solutionsTabletOverlay = document.getElementById('solutionsTabletOverlay');
+
+  const toggleSolutionsVideo = () => {
+    if (!solutionsTabletVideo) return;
+    if (solutionsTabletVideo.paused) {
+      solutionsTabletVideo.controls = true;
+      const playPromise = solutionsTabletVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          solutionsTabletOverlay?.classList.add('playing');
+        }).catch(() => {
+          solutionsTabletVideo.muted = true;
+          solutionsTabletVideo.play();
+          solutionsTabletOverlay?.classList.add('playing');
+        });
+      }
+    } else {
+      solutionsTabletVideo.pause();
+      solutionsTabletOverlay?.classList.remove('playing');
+    }
+  };
+
+  solutionsPlayBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleSolutionsVideo();
+  });
+
+  solutionsTabletFrame?.addEventListener('click', (e) => {
+    if (e.target !== solutionsTabletVideo || !solutionsTabletVideo.controls) {
+      toggleSolutionsVideo();
+    }
+  });
+
+  solutionsTabletVideo?.addEventListener('play', () => {
+    solutionsTabletOverlay?.classList.add('playing');
+  });
+
+  solutionsTabletVideo?.addEventListener('pause', () => {
+    if (solutionsTabletVideo.ended) {
+      solutionsTabletOverlay?.classList.remove('playing');
+    }
+  });
+
+  const solutionsViewInfographicBtn = document.getElementById('solutionsViewInfographicBtn');
+  solutionsViewInfographicBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const expSection = document.getElementById('experience');
+    if (expSection) {
+      expSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      switchExpMode('posters');
+    }
+  });
+
+  // E. Image Lightbox (Used exclusively for zooming HD Rate Cards & infographics, ZERO video popups)
   const lightboxModal = document.getElementById('mediaLightboxModal');
   const lightboxTitle = document.getElementById('lightboxTitle');
   const lightboxBody = document.getElementById('lightboxBody');
   const lightboxDesc = document.getElementById('lightboxDesc');
   const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
 
-  const openMediaLightbox = (type, src, title, desc) => {
+  const openImageLightbox = (src, title, desc) => {
     if (!lightboxModal || !lightboxBody) return;
-    
-    lightboxTitle.textContent = title || 'Media Showcase';
+    lightboxTitle.textContent = title || 'Visual Dokumen REVO';
     lightboxDesc.textContent = desc || '';
-
-    if (type === 'video') {
-      lightboxBody.innerHTML = `
-        <video src="${src}" controls autoplay playsinline style="max-width:100%; max-height:calc(90vh - 120px); border-radius:8px; outline:none; background:#000;">
-          Pelayar anda tidak menyokong tag video HTML5.
-        </video>
-      `;
-    } else {
-      lightboxBody.innerHTML = `
-        <img src="${src}" alt="${title || 'Media REVO'}" style="max-width:100%; max-height:calc(90vh - 120px); object-fit:contain; border-radius:8px;">
-      `;
-    }
-
+    lightboxBody.innerHTML = `
+      <img src="${src}" alt="${title || 'Dokumen REVO'}" style="max-width:100%; max-height:calc(90vh - 120px); object-fit:contain; border-radius:8px;">
+    `;
     lightboxModal.classList.add('active');
     lightboxModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   };
 
-  const closeMediaLightbox = () => {
+  const closeLightbox = () => {
     if (!lightboxModal) return;
-    const activeVideo = lightboxBody?.querySelector('video');
-    if (activeVideo) {
-      activeVideo.pause();
-      activeVideo.src = '';
-    }
     lightboxModal.classList.remove('active');
     lightboxModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     if (lightboxBody) lightboxBody.innerHTML = '';
   };
 
-  // Click triggers for lightbox
   document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('[data-lightbox-video], [data-lightbox-image]');
+    const trigger = e.target.closest('[data-lightbox-image]');
     if (trigger) {
       e.preventDefault();
-      const videoSrc = trigger.getAttribute('data-lightbox-video');
       const imgSrc = trigger.getAttribute('data-lightbox-image');
       const title = trigger.getAttribute('data-lightbox-title') || trigger.getAttribute('title') || '';
       const desc = trigger.getAttribute('data-lightbox-desc') || '';
-
-      if (videoSrc) {
-        openMediaLightbox('video', videoSrc, title, desc);
-      } else if (imgSrc) {
-        openMediaLightbox('image', imgSrc, title, desc);
+      if (imgSrc) {
+        openImageLightbox(imgSrc, title, desc);
       }
     }
   });
 
-  lightboxCloseBtn?.addEventListener('click', closeMediaLightbox);
+  lightboxCloseBtn?.addEventListener('click', closeLightbox);
   lightboxModal?.addEventListener('click', (e) => {
-    if (e.target === lightboxModal) {
-      closeMediaLightbox();
-    }
+    if (e.target === lightboxModal) closeLightbox();
   });
-
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightboxModal?.classList.contains('active')) {
-      closeMediaLightbox();
+      closeLightbox();
     }
-  });
-
-  // Gallery Filter Tabs
-  const galleryTabs = document.querySelectorAll('.gallery-tab-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item-card');
-
-  galleryTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      galleryTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const filter = tab.getAttribute('data-filter') || 'all';
-
-      galleryItems.forEach(item => {
-        const itemCat = item.getAttribute('data-category') || '';
-        if (filter === 'all' || itemCat === filter) {
-          item.style.display = 'flex';
-          item.style.opacity = '1';
-        } else {
-          item.style.display = 'none';
-          item.style.opacity = '0';
-        }
-      });
-    });
   });
 
   // Smooth inline scroll helper for buttons
