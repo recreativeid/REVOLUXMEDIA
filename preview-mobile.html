@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REVO LUX MEDIA — Live Mobile Device Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: radial-gradient(circle at top, #181E26 0%, #050608 100%);
+      color: #F5F3EE;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+      overflow-x: hidden;
+    }
+
+    /* Top Control Hub */
+    .controls-header {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 22px;
+      background: rgba(24, 30, 38, 0.85);
+      border: 1px solid rgba(201, 164, 92, 0.25);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+      margin-bottom: 28px;
+    }
+
+    .brand-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-badge-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #C9A45C;
+      box-shadow: 0 0 10px #C9A45C;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-title span {
+      color: #C9A45C;
+    }
+
+    .control-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-tool {
+      background: rgba(36, 42, 50, 0.8);
+      border: 1px solid rgba(201, 164, 92, 0.2);
+      color: #F5F3EE;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-tool:hover, .btn-tool.active {
+      background: rgba(201, 164, 92, 0.2);
+      border-color: #C9A45C;
+      color: #E8C98F;
+    }
+
+    .device-select {
+      background: rgba(36, 42, 50, 0.9);
+      border: 1px solid rgba(201, 164, 92, 0.25);
+      color: #F5F3EE;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Device Mockup Wrapper */
+    .simulator-stage {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0 40px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Realistic Smartphone Body (iPhone 15 Pro Aesthetic) */
+    .phone-chassis {
+      position: relative;
+      width: 393px;
+      height: 852px;
+      background: #1C1E22;
+      border-radius: 54px;
+      padding: 12px;
+      box-shadow: 
+        0 0 0 4px #3C4048,
+        0 0 0 7px #1A1D20,
+        0 25px 60px rgba(0, 0, 0, 0.8),
+        0 10px 25px rgba(201, 164, 92, 0.15);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Side Buttons */
+    .phone-chassis::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 130px;
+      width: 4px;
+      height: 32px; /* Action button */
+      background: #2E3238;
+      border-radius: 3px 0 0 3px;
+      box-shadow: 
+        0 50px 0 #2E3238, /* Volume Up */
+        0 110px 0 #2E3238; /* Volume Down */
+    }
+
+    .phone-chassis::after {
+      content: '';
+      position: absolute;
+      right: -9px;
+      top: 175px;
+      width: 4px;
+      height: 65px; /* Power button */
+      background: #2E3238;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Inner Screen Glass */
+    .phone-screen-glass {
+      width: 100%;
+      height: 100%;
+      background: #050608;
+      border-radius: 44px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Dynamic Island Bar */
+    .dynamic-island {
+      position: absolute;
+      top: 11px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 32px;
+      background: #000000;
+      border-radius: 20px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+    }
+
+    .camera-lens {
+      width: 12px;
+      height: 12px;
+      background: radial-gradient(circle at 30% 30%, #1A2238 0%, #050508 80%);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sensor-dot {
+      width: 9px;
+      height: 9px;
+      background: #0A0C10;
+      border-radius: 50%;
+    }
+
+    /* Live Website iFrame */
+    .phone-viewport-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #050608;
+      display: block;
+    }
+
+    /* Landscape Mode */
+    .phone-chassis.landscape {
+      width: 852px;
+      height: 393px;
+    }
+
+    .phone-chassis.landscape::before {
+      top: -9px;
+      left: 175px;
+      width: 65px;
+      height: 4px;
+      border-radius: 3px 3px 0 0;
+      box-shadow: none;
+    }
+
+    .phone-chassis.landscape::after {
+      bottom: -9px;
+      top: auto;
+      left: 130px;
+      right: auto;
+      width: 32px;
+      height: 4px;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .phone-chassis.landscape .dynamic-island {
+      top: 50%;
+      left: 11px;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    /* Device Variations */
+    .phone-chassis.s24 {
+      border-radius: 36px;
+    }
+    .phone-chassis.s24 .phone-screen-glass {
+      border-radius: 28px;
+    }
+    .phone-chassis.s24 .dynamic-island {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      padding: 0;
+      justify-content: center;
+      top: 14px;
+    }
+    .phone-chassis.s24 .sensor-dot {
+      display: none;
+    }
+
+    /* Footer hints */
+    .simulator-hint {
+      margin-top: 12px;
+      font-size: 0.825rem;
+      color: #A9ADB4;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .simulator-hint kbd {
+      background: rgba(201, 164, 92, 0.15);
+      border: 1px solid rgba(201, 164, 92, 0.3);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      color: #E8C98F;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls Hub -->
+  <header class="controls-header">
+    <div class="brand-badge">
+      <div class="brand-badge-dot"></div>
+      <div class="brand-title">REVO <span>LUX</span> &bull; Device Simulator</div>
+    </div>
+
+    <div class="control-actions">
+      <!-- Device Selector -->
+      <select id="deviceSelector" class="device-select" aria-label="Select Device Model">
+        <option value="iphone15" selected>iPhone 15 Pro (393 &times; 852)</option>
+        <option value="iphone14" >iPhone 14 / 13 (390 &times; 844)</option>
+        <option value="s24">Samsung Galaxy S24 (412 &times; 915)</option>
+        <option value="se">iPhone SE (375 &times; 667)</option>
+      </select>
+
+      <!-- Orientation Toggle -->
+      <button type="button" id="rotateBtn" class="btn-tool" title="Rotate Orientation">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Rotate</span>
+      </button>
+
+      <!-- Source Toggle (Local index.html vs GitHub Pages) -->
+      <select id="sourceSelector" class="device-select" aria-label="Select Source">
+        <option value="index.html" selected>Source: Local index.html</option>
+        <option value="https://recreativeid.github.io/REVOLUXMEDIA/">Source: GitHub Pages</option>
+      </select>
+
+      <!-- Reload button -->
+      <button type="button" id="reloadBtn" class="btn-tool" title="Reload Frame">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Physical Smartphone Frame -->
+  <main class="simulator-stage">
+    <div class="phone-chassis" id="phoneChassis">
+      <div class="phone-screen-glass">
+        <!-- Dynamic Island / Punch Hole -->
+        <div class="dynamic-island" id="dynamicIsland">
+          <div class="sensor-dot"></div>
+          <div class="camera-lens"></div>
+        </div>
+
+        <!-- Embedded Interactive Web Page -->
+        <iframe 
+          id="viewportIframe" 
+          class="phone-viewport-frame" 
+          src="index.html" 
+          title="REVO LUX MEDIA Mobile Preview"
+          loading="eager">
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="simulator-hint">
+    <span>💡 <strong>Tip:</strong> Buka fail ini menggunakan <kbd>Simple Browser: Show</kbd> di Antigravity untuk kawalan interaktif terus di dalam IDE!</span>
+  </footer>
+
+  <script>
+    const phoneChassis = document.getElementById('phoneChassis');
+    const deviceSelector = document.getElementById('deviceSelector');
+    const rotateBtn = document.getElementById('rotateBtn');
+    const sourceSelector = document.getElementById('sourceSelector');
+    const reloadBtn = document.getElementById('reloadBtn');
+    const viewportIframe = document.getElementById('viewportIframe');
+
+    const devices = {
+      'iphone15': { w: 393, h: 852, type: 'iphone' },
+      'iphone14': { w: 390, h: 844, type: 'iphone' },
+      's24': { w: 412, h: 915, type: 's24' },
+      'se': { w: 375, h: 667, type: 'iphone' }
+    };
+
+    let isLandscape = false;
+    let currentDevice = 'iphone15';
+
+    function applyDimensions() {
+      const spec = devices[currentDevice];
+      phoneChassis.className = 'phone-chassis' + (isLandscape ? ' landscape' : '') + (spec.type === 's24' ? ' s24' : '');
+      
+      if (isLandscape) {
+        phoneChassis.style.width = spec.h + 'px';
+        phoneChassis.style.height = spec.w + 'px';
+      } else {
+        phoneChassis.style.width = spec.w + 'px';
+        phoneChassis.style.height = spec.h + 'px';
+      }
+    }
+
+    deviceSelector.addEventListener('change', (e) => {
+      currentDevice = e.target.value;
+      applyDimensions();
+    });
+
+    rotateBtn.addEventListener('click', () => {
+      isLandscape = !isLandscape;
+      rotateBtn.classList.toggle('active', isLandscape);
+      applyDimensions();
+    });
+
+    sourceSelector.addEventListener('change', (e) => {
+      viewportIframe.src = e.target.value;
+    });
+
+    reloadBtn.addEventListener('click', () => {
+      viewportIframe.src = viewportIframe.src;
+    });
+  </script>
+</body>
+</html>
