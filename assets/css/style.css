@@ -1047,10 +1047,19 @@ button, input, select, textarea {
 
 .about-image-card {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(201, 164, 92, 0.25);
-  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  max-height: 480px;
+  background: var(--c-graphite);
+  transition: all var(--transition-base);
+}
+
+.about-image-card:hover {
+  border-color: rgba(201, 164, 92, 0.65);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(201, 164, 92, 0.2);
 }
 
 .about-image-card img {
@@ -2926,11 +2935,14 @@ textarea.form-control {
   grid-template-columns: 1fr;
   gap: var(--space-xl);
   align-items: center;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 860px) {
   .rate-card-banner-box {
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 280px 1fr;
   }
 }
 
@@ -2942,6 +2954,8 @@ textarea.form-control {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
   cursor: pointer;
   transition: transform var(--transition-base);
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 .rate-card-preview-thumb:hover {
@@ -3045,7 +3059,8 @@ textarea.form-control {
 .gallery-media-thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 9/16;
+  aspect-ratio: 9/14;
+  max-height: 340px;
   background: #000;
   overflow: hidden;
   cursor: pointer;
