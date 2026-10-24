@@ -390,6 +390,106 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ========================================================================
+  // 6. MULTIMEDIA LIGHTBOX & GALLERY FILTERING
+  // ========================================================================
+  const lightboxModal = document.getElementById('mediaLightboxModal');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxBody = document.getElementById('lightboxBody');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+
+  const openMediaLightbox = (type, src, title, desc) => {
+    if (!lightboxModal || !lightboxBody) return;
+    
+    lightboxTitle.textContent = title || 'Media Showcase';
+    lightboxDesc.textContent = desc || '';
+
+    if (type === 'video') {
+      lightboxBody.innerHTML = `
+        <video src="${src}" controls autoplay playsinline style="max-width:100%; max-height:calc(90vh - 120px); border-radius:8px; outline:none; background:#000;">
+          Pelayar anda tidak menyokong tag video HTML5.
+        </video>
+      `;
+    } else {
+      lightboxBody.innerHTML = `
+        <img src="${src}" alt="${title || 'Media REVO'}" style="max-width:100%; max-height:calc(90vh - 120px); object-fit:contain; border-radius:8px;">
+      `;
+    }
+
+    lightboxModal.classList.add('active');
+    lightboxModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMediaLightbox = () => {
+    if (!lightboxModal) return;
+    const activeVideo = lightboxBody?.querySelector('video');
+    if (activeVideo) {
+      activeVideo.pause();
+      activeVideo.src = '';
+    }
+    lightboxModal.classList.remove('active');
+    lightboxModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lightboxBody) lightboxBody.innerHTML = '';
+  };
+
+  // Click triggers for lightbox
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-lightbox-video], [data-lightbox-image]');
+    if (trigger) {
+      e.preventDefault();
+      const videoSrc = trigger.getAttribute('data-lightbox-video');
+      const imgSrc = trigger.getAttribute('data-lightbox-image');
+      const title = trigger.getAttribute('data-lightbox-title') || trigger.getAttribute('title') || '';
+      const desc = trigger.getAttribute('data-lightbox-desc') || '';
+
+      if (videoSrc) {
+        openMediaLightbox('video', videoSrc, title, desc);
+      } else if (imgSrc) {
+        openMediaLightbox('image', imgSrc, title, desc);
+      }
+    }
+  });
+
+  lightboxCloseBtn?.addEventListener('click', closeMediaLightbox);
+  lightboxModal?.addEventListener('click', (e) => {
+    if (e.target === lightboxModal) {
+      closeMediaLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal?.classList.contains('active')) {
+      closeMediaLightbox();
+    }
+  });
+
+  // Gallery Filter Tabs
+  const galleryTabs = document.querySelectorAll('.gallery-tab-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item-card');
+
+  galleryTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      galleryTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filter = tab.getAttribute('data-filter') || 'all';
+
+      galleryItems.forEach(item => {
+        const itemCat = item.getAttribute('data-category') || '';
+        if (filter === 'all' || itemCat === filter) {
+          item.style.display = 'flex';
+          item.style.opacity = '1';
+        } else {
+          item.style.display = 'none';
+          item.style.opacity = '0';
+        }
+      });
+    });
+  });
+
   // Smooth inline scroll helper for buttons
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

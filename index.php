@@ -264,6 +264,10 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
             <a href="#solutions" class="btn btn-outline btn-full-mobile">
               <span data-i18n="hero_cta_explore">TEROKAI CARA IA BERFUNGSI</span>
             </a>
+            <button type="button" class="hero-video-pill" data-lightbox-video="assets/videos/revo-fleet-cinematic.mp4" data-lightbox-title="Pengalaman Armada REVO • Kuala Lumpur &amp; KLIA" data-lightbox-desc="Tonton paparan sinematik kenderaan Toyota Alphard &amp; Vellfire REVO beroperasi di lebuh raya moden Kuala Lumpur.">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span data-i18n="hero_watch_btn">TONTON VIDEO ARMADA (10s)</span>
+            </button>
           </div>
 
           <!-- Supporting Microcopy -->
@@ -331,12 +335,25 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
     <section class="revo-section about-section" id="about">
       <div class="revo-container">
         <div class="about-grid">
-          <!-- Automotive Visual -->
-          <div class="about-image-card">
-            <img src="assets/images/alphard-interior.jpg" alt="Suasana kabin dalaman Alphard dengan paparan skrin media digital" loading="lazy">
-            <div class="about-image-badge">
-              <span class="about-image-badge-text" data-i18n="about_badge_text">PENGALAMAN KABIN VIP ALPHARD</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A45C" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <!-- Automotive Visual (Dual Media Showcase: In-Cabin + VIP Boarding Video) -->
+          <div class="about-media-duo">
+            <!-- Card 1: In-Cabin Experience Photo -->
+            <div class="media-interactive-card" data-lightbox-image="assets/images/revo-in-cabin-passenger.jpg" data-lightbox-title="Toyota Alphard VIP Cabin" data-lightbox-desc="Suasana santai penumpang eksekutif menikmati paparan skrin 1080p tanpa gangguan.">
+              <span class="media-card-badge" data-i18n="about_card1_badge">Toyota Alphard VIP Cabin</span>
+              <img src="assets/images/revo-in-cabin-passenger.jpg" alt="Penumpang eksekutif di kabin VIP Alphard menghadap skrin iklan REVO" loading="lazy">
+              <div class="media-caption-bar" data-i18n="about_card1_caption">Paparan skrin tepat pada aras mata penumpang eksekutif</div>
+            </div>
+
+            <!-- Card 2: VIP Boarding Experience Video -->
+            <div class="media-interactive-card" data-lightbox-video="assets/videos/revo-vip-boarding.mp4" data-lightbox-title="Pengalaman Menaiki Armada VIP REVO" data-lightbox-desc="Rakaman eksklusif penumpang eksekutif melangkah masuk ke dalam Toyota Alphard REVO.">
+              <span class="media-card-badge" data-i18n="about_card2_badge">Pengalaman Menaiki Armada (Video)</span>
+              <video src="assets/videos/revo-vip-boarding.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+              <div class="media-caption-bar" data-i18n="about_card2_caption">Langkah masuk VIP ke dalam Toyota Alphard REVO</div>
             </div>
           </div>
 
@@ -446,6 +463,98 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
                 <span data-i18n="adv_revo_f4"><strong>Tindakan Segera (QR Interactive):</strong> Penumpang mempunyai masa santai untuk mengimbas kod QR dan terus berhubung.</span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <!-- Visual Attention Comparison Video Showcase -->
+        <div class="attention-showcase-wrap">
+          <h3 class="attention-showcase-title" data-i18n="adv_comparison_title">Perbandingan Visual: Mengapa In-Car Media Mengatasi Saluran Lain?</h3>
+          <p class="attention-showcase-sub" data-i18n="adv_comparison_sub">Tonton rakaman sebenar bagaimana audiens bertindak balas terhadap pelbagai saluran iklan berbanding suasana kabin tenang REVO.</p>
+
+          <div class="attention-video-grid">
+            <!-- Card 1: Billboard -->
+            <div class="attention-video-card">
+              <div class="attention-thumb-box" data-lightbox-video="assets/videos/revo-vs-billboard.mp4" data-lightbox-title="Billboard Lebuhraya" data-lightbox-desc="Paparan statik tepi lebuhraya yang bersaing dengan tumpuan pemanduan laju.">
+                <video src="assets/videos/revo-vs-billboard.mp4#t=1" muted loop playsinline autoplay></video>
+                <div class="media-play-overlay">
+                  <div class="play-circle-btn" style="width:40px;height:40px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="attention-card-body">
+                <span class="attention-card-tag" data-i18n="adv_v1_tag">Papan Tanda Lebuhraya</span>
+                <h4 class="attention-card-title" data-i18n="adv_v1_title">Billboard Lebuhraya</h4>
+                <p class="attention-card-desc" data-i18n="adv_v1_desc">Kereta memecut laju. Pemandu hanya menjeling 2 saat sambil menumpukan stereng.</p>
+                <button type="button" class="attention-card-btn" data-lightbox-video="assets/videos/revo-vs-billboard.mp4" data-lightbox-title="Billboard Lebuhraya">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="adv_v_watch">Tonton Klip Video</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: Mobile Scroll -->
+            <div class="attention-video-card">
+              <div class="attention-thumb-box" data-lightbox-video="assets/videos/revo-vs-mobile-scroll.mp4" data-lightbox-title="Iklan di Telefon Bimbit" data-lightbox-desc="Skrol pantas pengguna di media sosial menyebabkan iklan mudah terabai.">
+                <video src="assets/videos/revo-vs-mobile-scroll.mp4#t=1" muted loop playsinline autoplay></video>
+                <div class="media-play-overlay">
+                  <div class="play-circle-btn" style="width:40px;height:40px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="attention-card-body">
+                <span class="attention-card-tag" data-i18n="adv_v2_tag">Media Sosial / Skrol Telefon</span>
+                <h4 class="attention-card-title" data-i18n="adv_v2_title">Iklan Di Telefon Bimbit</h4>
+                <p class="attention-card-desc" data-i18n="adv_v2_desc">Jari menatal pantas, iklan terabai dan diskip dalam masa kurang 1 saat.</p>
+                <button type="button" class="attention-card-btn" data-lightbox-video="assets/videos/revo-vs-mobile-scroll.mp4" data-lightbox-title="Iklan di Telefon Bimbit">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="adv_v_watch">Tonton Klip Video</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3: Mall Poster -->
+            <div class="attention-video-card">
+              <div class="attention-thumb-box" data-lightbox-video="assets/videos/revo-vs-poster-mall.mp4" data-lightbox-title="Poster Pusat Beli-Belah" data-lightbox-desc="Poster mall terdedah kepada kesesakan orang lalu-lalang tanpa perhatian mendalam.">
+                <video src="assets/videos/revo-vs-poster-mall.mp4#t=1" muted loop playsinline autoplay></video>
+                <div class="media-play-overlay">
+                  <div class="play-circle-btn" style="width:40px;height:40px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="attention-card-body">
+                <span class="attention-card-tag" data-i18n="adv_v3_tag">Poster Awam &amp; Mall</span>
+                <h4 class="attention-card-title" data-i18n="adv_v3_title">Kiosk / Poster Mall</h4>
+                <p class="attention-card-desc" data-i18n="adv_v3_desc">Kesesakan orang ramai yang lalu-lalang tanpa berhenti untuk membaca mesej.</p>
+                <button type="button" class="attention-card-btn" data-lightbox-video="assets/videos/revo-vs-poster-mall.mp4" data-lightbox-title="Kiosk / Poster Mall">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="adv_v_watch">Tonton Klip Video</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4: REVO In-Car Media (Highlighted Winner) -->
+            <div class="attention-video-card highlight-revo">
+              <div class="attention-thumb-box" data-lightbox-video="assets/videos/revo-cabin-experience.mp4" data-lightbox-title="REVO In-Car Media Network" data-lightbox-desc="Tontonan selesa 45 minit tanpa sebarang gangguan di dalam kabin Toyota Alphard &amp; Vellfire.">
+                <video src="assets/videos/revo-cabin-experience.mp4#t=1" muted loop playsinline autoplay></video>
+                <div class="media-play-overlay">
+                  <div class="play-circle-btn" style="width:40px;height:40px;background:var(--c-gold-metallic);color:#050608;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="attention-card-body">
+                <span class="attention-card-tag" data-i18n="adv_v4_tag">Pengalaman Eksklusif REVO</span>
+                <h4 class="attention-card-title" data-i18n="adv_v4_title">REVO In-Car Media</h4>
+                <p class="attention-card-desc" data-i18n="adv_v4_desc">45 minit perhatian penuh tanpa sebarang gangguan dalam keselesaan kerusi VIP Alphard.</p>
+                <button type="button" class="attention-card-btn" style="background:var(--c-gold-metallic);color:#050608;font-weight:700;" data-lightbox-video="assets/videos/revo-cabin-experience.mp4" data-lightbox-title="REVO In-Car Media">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="adv_v_watch">Tonton Klip Video</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -572,6 +681,21 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
               <p class="touchpoint-desc" data-i18n="tp6_desc">Perjalanan keluarga berprofil tinggi yang menikmati keselesaan ruang 7 &amp; 8 tempat duduk Alphard &amp; Vellfire.</p>
             </div>
           </div>
+
+          <!-- Official Touchpoints Photographic Visual Banner -->
+          <div class="touchpoints-photo-card" data-lightbox-image="assets/images/revo-touchpoints-grid.jpg" data-lightbox-title="Visual Sebenar 6 Titik Sentuhan Penumpang VIP" data-lightbox-desc="KLIA Transfer, Pusat Bandar KLCC, Hotel Premium, Pusat Beli-Belah, Event &amp; Pameran, Pelancong &amp; Eksekutif.">
+            <img src="assets/images/revo-touchpoints-grid.jpg" alt="Visual Sebenar 6 Titik Sentuhan Penumpang VIP - REVO Mobile Media Network" loading="lazy">
+            <div class="photo-card-overlay">
+              <div>
+                <div class="photo-card-title" data-i18n="tp_photo_title">Visual Sebenar 6 Titik Sentuhan Penumpang VIP</div>
+                <div class="photo-card-sub" data-i18n="tp_photo_sub">KLIA Transfer • Pusat Bandar KLCC • Hotel 5-Bintang • Pusat Beli-Belah • Pameran Korporat • Delegasi Eksekutif (Klik untuk besarkan)</div>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm" style="flex-shrink:0;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                <span>ZOOM</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <div style="text-align: center;">
@@ -594,6 +718,40 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
           <p class="section-subtitle" data-i18n="sol_subtitle">
             Setiap jenama mempunyai objektif yang berbeza. Terokai format pengiklanan yang mungkin sesuai dengan mesej dan keperluan kempen anda.
           </p>
+        </div>
+
+        <!-- Live In-Cabin Campaign Proof (PERKESO Live Footage) -->
+        <div class="solutions-showcase-box">
+          <div>
+            <div class="section-tag" data-i18n="sol_live_proof_badge">SIARAN KEMPEN AKTIF</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--c-white); margin-bottom: 10px;" data-i18n="sol_live_proof_title">
+              Bukti Siaran Kempen Sebenar Di Dalam Kabin
+            </h3>
+            <p style="font-size: 0.885rem; color: var(--c-silver); line-height: 1.6; margin-bottom: var(--space-md);" data-i18n="sol_live_proof_desc">
+              Saksikan bagaimana kempen rakan korporat dan agensi seperti PERKESO disiarkan secara dinamik di skrin resolusi tinggi Toyota Alphard REVO.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
+              <button type="button" class="btn btn-primary btn-sm" data-lightbox-video="assets/videos/revo-live-campaign-perkeso.mp4" data-lightbox-title="Bukti Siaran Kempen PERKESO Dalam Kabin REVO" data-lightbox-desc="Rakaman penyiaran kempen PERKESO di skrin digital Alphard REVO.">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>TONTON SKRIN PENUH</span>
+              </button>
+              <button type="button" class="btn btn-outline btn-sm" data-lightbox-image="assets/images/revo-poster-overview.jpg" data-lightbox-title="Infografik Ringkasan Media REVO" data-lightbox-desc="Poster infografik rasmi rangkaian pengiklanan in-car Alphard &amp; Vellfire REVO.">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span data-i18n="sol_overview_btn">Lihat Infografik Rangkaian Media REVO</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tablet Mockup with Live Video -->
+          <div class="tablet-mockup-frame" data-lightbox-video="assets/videos/revo-live-campaign-perkeso.mp4" data-lightbox-title="Bukti Siaran Kempen PERKESO Dalam Kabin REVO" style="cursor: pointer;">
+            <span class="live-badge-glow">LIVE IN-CAR</span>
+            <video src="assets/videos/revo-live-campaign-perkeso.mp4#t=1" muted loop playsinline autoplay></video>
+            <div class="media-play-overlay">
+              <div class="play-circle-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="solutions-grid">
@@ -971,6 +1129,31 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
           <?php endforeach; ?>
         </div>
 
+        <!-- Official Visual Rate Card Banner Box -->
+        <div class="rate-card-banner-box">
+          <div class="rate-card-preview-thumb" data-lightbox-image="assets/images/revo-official-rate-card.jpg" data-lightbox-title="Kadar Rasmi Pakej Iklan REVO (Bulanan &amp; Rangkaian)" data-lightbox-desc="Kadar rasmi slot 5s, 10s, 15s, 20s, 30s untuk 5-50 unit Alphard &amp; Vellfire.">
+            <img src="assets/images/revo-official-rate-card.jpg" alt="Poster Kadar Rasmi Pakej Iklan REVO" loading="lazy">
+            <div class="media-play-overlay">
+              <div class="play-circle-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="section-tag" data-i18n="pkg_tag">KADAR TRANSPARAN</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 700; color: var(--c-white); margin-bottom: 8px;" data-i18n="pkg_rate_card_title">
+              Kadar Rasmi Pakej Iklan Bulanan (Mengikut Unit &amp; Seluruh Rangkaian)
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--c-silver); line-height: 1.6; margin-bottom: var(--space-md);" data-i18n="pkg_rate_card_desc">
+              Pilihan fleksibel bermula dari 5 saat sehingga 30 saat untuk 5 hingga 50 kenderaan, serta slot penajaan kategori eksklusif. Klik poster untuk melihat perincian penuh.
+            </p>
+            <button type="button" class="btn btn-primary btn-sm" data-lightbox-image="assets/images/revo-official-rate-card.jpg" data-lightbox-title="Kadar Rasmi Pakej Iklan REVO (Bulanan &amp; Rangkaian)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              <span data-i18n="pkg_rate_card_btn">Buka Poster Kadar Rasmi (HD)</span>
+            </button>
+          </div>
+        </div>
+
         <!-- Soft Reassurance Box -->
         <div class="soft-reassurance-box">
           <p data-i18n="pkg_reassurance">
@@ -981,8 +1164,316 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
     </section>
 
     <!-- ========================================================================
-         10. OBJECTION-HANDLING FAQ ACCORDION
+         9B. DEDICATED MULTIMEDIA & FLEET GALLERY (13 ASSETS SHOWCASE)
          ======================================================================== -->
+    <section class="revo-section gallery-section" id="gallery">
+      <div class="revo-container">
+        <div class="section-header text-center">
+          <div class="section-tag" data-i18n="gallery_tag">GALERI MEDIA &amp; ARMADA</div>
+          <h2 class="section-title" data-i18n="gallery_title">Pustaka Visual &amp; Bukti Siaran Eksklusif REVO</h2>
+          <p class="section-subtitle" data-i18n="gallery_subtitle">
+            Terokai video armada, suasana kabin VIP, ujian perbandingan impak iklan, serta infografik dan kadar rasmi REVO.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="gallery-filter-tabs">
+          <button type="button" class="gallery-tab-btn active" data-filter="all" data-i18n="gallery_tab_all">Semua Media (13)</button>
+          <button type="button" class="gallery-tab-btn" data-filter="fleet" data-i18n="gallery_tab_fleet">Video Kabin &amp; Armada (4)</button>
+          <button type="button" class="gallery-tab-btn" data-filter="comparison" data-i18n="gallery_tab_comparison">Video Perbandingan Iklan (5)</button>
+          <button type="button" class="gallery-tab-btn" data-filter="posters" data-i18n="gallery_tab_posters">Poster &amp; Infografik Rasmi (4)</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- 1. Video: Fleet Cinematic -->
+          <div class="gallery-item-card" data-category="fleet">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-fleet-cinematic.mp4" data-lightbox-title="Armada Sinematik Alphard &amp; Vellfire REVO" data-lightbox-desc="Paparan luar kenderaan bergerak seiring di latar mercu tanda Kuala Lumpur.">
+              <span class="media-card-badge">VIDEO • 10s</span>
+              <video src="assets/videos/revo-fleet-cinematic.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">ARMADA DI JALAN RAYA</span>
+              <h3 class="gallery-item-title">Armada Sinematik Alphard &amp; Vellfire</h3>
+              <p class="gallery-item-desc">Imej bergerak 50 kenderaan premium REVO di lebuh raya moden KL &amp; koridor KLIA.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-fleet-cinematic.mp4" data-lightbox-title="Armada Sinematik Alphard &amp; Vellfire REVO">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Video: In-Cabin Experience -->
+          <div class="gallery-item-card" data-category="fleet">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-cabin-experience.mp4" data-lightbox-title="Pengalaman Kabin Eksekutif VIP" data-lightbox-desc="Tontonan selesa 45 minit tanpa sebarang gangguan di kerusi kapten Alphard.">
+              <span class="media-card-badge">VIDEO • 10s</span>
+              <video src="assets/videos/revo-cabin-experience.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">PENGALAMAN DALAMAN</span>
+              <h3 class="gallery-item-title">Pengalaman Tontonan Kabin VIP</h3>
+              <p class="gallery-item-desc">Skrin 1080p berdefinisi tinggi tepat pada paras pandangan penumpang korporat.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-cabin-experience.mp4" data-lightbox-title="Pengalaman Kabin Eksekutif VIP">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Video: VIP Boarding -->
+          <div class="gallery-item-card" data-category="fleet">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-vip-boarding.mp4" data-lightbox-title="Pengalaman Menaiki Armada VIP" data-lightbox-desc="Langkah eksklusif tetamu kehormat menaiki kenderaan Toyota Alphard REVO.">
+              <span class="media-card-badge">VIDEO • 21s</span>
+              <video src="assets/videos/revo-vip-boarding.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">PERJALANAN EKSEKUTIF</span>
+              <h3 class="gallery-item-title">Langkah Masuk VIP Ke Alphard</h3>
+              <p class="gallery-item-desc">Sentuhan mobiliti mewah melayani delegasi perniagaan, pelancong dan tetamu VIP.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-vip-boarding.mp4" data-lightbox-title="Pengalaman Menaiki Armada VIP">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Video: Live Campaign PERKESO -->
+          <div class="gallery-item-card" data-category="fleet">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-live-campaign-perkeso.mp4" data-lightbox-title="Siaran Kempen PERKESO Dalam Kabin" data-lightbox-desc="Bukti nyata penyiaran iklan pelanggan korporat dan agensi kerajaan di skrin REVO.">
+              <span class="media-card-badge" style="border-color:#e70011;color:#ff6b6b;">LIVE CAMPAIGN • 10s</span>
+              <video src="assets/videos/revo-live-campaign-perkeso.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">BUKTI SIARAN RASMI</span>
+              <h3 class="gallery-item-title">Kempen PERKESO Di Skrin Alphard</h3>
+              <p class="gallery-item-desc">Penyiaran kempen pemulihan PERKESO secara langsung kepada penumpang VIP.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-live-campaign-perkeso.mp4" data-lightbox-title="Siaran Kempen PERKESO Dalam Kabin">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Video: Highway Billboard Comparison -->
+          <div class="gallery-item-card" data-category="comparison">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-vs-billboard.mp4" data-lightbox-title="Ujian Papan Iklan Lebuhraya" data-lightbox-desc="Ujian tumpuan pemandu terhadap billboard lebuhraya berbanding kabin santai.">
+              <span class="media-card-badge">PERBANDINGAN • 11s</span>
+              <video src="assets/videos/revo-vs-billboard.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">SALURAN TRADISIONAL</span>
+              <h3 class="gallery-item-title">Billboard Iklan Di Lebuhraya?</h3>
+              <p class="gallery-item-desc">Hanya dilihat 2 saat ketika memandu laju berbanding 45 minit di dalam REVO.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-vs-billboard.mp4" data-lightbox-title="Ujian Papan Iklan Lebuhraya">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Video: Mobile Social Scroll Comparison -->
+          <div class="gallery-item-card" data-category="comparison">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-vs-mobile-scroll.mp4" data-lightbox-title="Iklan di Telefon Bimbit" data-lightbox-desc="Kajian tabiat pengguna menatal pantas media sosial dan mengabaikan iklan feed.">
+              <span class="media-card-badge">PERBANDINGAN • 12s</span>
+              <video src="assets/videos/revo-vs-mobile-scroll.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">SALURAN DIGITAL</span>
+              <h3 class="gallery-item-title">Iklan Di Telefon Bimbit?</h3>
+              <p class="gallery-item-desc">Penonton menatal pantas dan mudah mengabaikan promosi dalam suapan media sosial.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-vs-mobile-scroll.mp4" data-lightbox-title="Iklan di Telefon Bimbit">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Video: Mall Poster Comparison -->
+          <div class="gallery-item-card" data-category="comparison">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-vs-poster-mall.mp4" data-lightbox-title="Ujian Poster Awam &amp; Mall" data-lightbox-desc="Kesesakan orang ramai yang berlalu-lalang tanpa menumpukan perhatian kepada poster.">
+              <span class="media-card-badge">PERBANDINGAN • 12s</span>
+              <video src="assets/videos/revo-vs-poster-mall.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">SALURAN TEMPAT AWAM</span>
+              <h3 class="gallery-item-title">Poster Pusat Beli-Belah?</h3>
+              <p class="gallery-item-desc">Penuh gangguan visual di tempat sesak berbanding suasana privat kabin kenderaan.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-vs-poster-mall.mp4" data-lightbox-title="Ujian Poster Awam &amp; Mall">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Video: TV & Media Social Comparison -->
+          <div class="gallery-item-card" data-category="comparison">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-vs-tv-social.mp4" data-lightbox-title="Ujian Iklan TV &amp; Media Sosial" data-lightbox-desc="Gangguan tontonan di rumah dan butang 'skip ad' yang mengurangkan pulangan iklan.">
+              <span class="media-card-badge">PERBANDINGAN • 11s</span>
+              <video src="assets/videos/revo-vs-tv-social.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">MEDIA PENYIARAN</span>
+              <h3 class="gallery-item-title">Iklan Dekat TV &amp; Media Sosial?</h3>
+              <p class="gallery-item-desc">Kadar langkauan tinggi berbanding tontonan santai berfokus tanpa 'skip ad'.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-vs-tv-social.mp4" data-lightbox-title="Ujian Iklan TV &amp; Media Sosial">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Video: Marketer Dilemma -->
+          <div class="gallery-item-card" data-category="comparison">
+            <div class="gallery-media-thumb" data-lightbox-video="assets/videos/revo-marketer-dilemma.mp4" data-lightbox-title="Dilema Saluran Iklan Pemasar" data-lightbox-desc="Mencari platform baharu berimpak tinggi yang benar-benar sampai kepada audiens bernilai.">
+              <span class="media-card-badge">STRATEGI • 11s</span>
+              <video src="assets/videos/revo-marketer-dilemma.mp4#t=1" muted loop playsinline autoplay></video>
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">STRATEGI PEMASARAN</span>
+              <h3 class="gallery-item-title">Perlukan Platform Pengiklanan?</h3>
+              <p class="gallery-item-desc">Jawapan inovatif untuk jenama yang mahu berdiri tegak di hadapan audiens eksekutif.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-video="assets/videos/revo-marketer-dilemma.mp4" data-lightbox-title="Dilema Saluran Iklan Pemasar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span data-i18n="gallery_play_video">Mainkan Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Image: Official Rate Card Poster -->
+          <div class="gallery-item-card" data-category="posters">
+            <div class="gallery-media-thumb" data-lightbox-image="assets/images/revo-official-rate-card.jpg" data-lightbox-title="Poster Kadar Rasmi Pakej Iklan REVO" data-lightbox-desc="Senarai harga rasmi pakej 5s, 10s, 15s, 20s, 30s untuk 5-50 unit Alphard &amp; Vellfire.">
+              <span class="media-card-badge">POSTER RASMI</span>
+              <img src="assets/images/revo-official-rate-card.jpg" alt="Poster Kadar Rasmi Pakej Iklan REVO" loading="lazy">
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">STRUKTUR KADAR</span>
+              <h3 class="gallery-item-title">Kadar Rasmi Pakej Iklan Bulanan</h3>
+              <p class="gallery-item-desc">Pakej mengikut unit (RM600–RM3,000) dan pakej seluruh rangkaian 50 unit (RM4k–RM10k).</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-image="assets/images/revo-official-rate-card.jpg" data-lightbox-title="Poster Kadar Rasmi Pakej Iklan REVO">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span data-i18n="gallery_zoom_photo">Besarkan Imej</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Image: 6 Touchpoints Mosaic Grid -->
+          <div class="gallery-item-card" data-category="posters">
+            <div class="gallery-media-thumb" data-lightbox-image="assets/images/revo-touchpoints-grid.jpg" data-lightbox-title="Visual 6 Titik Sentuhan Penumpang VIP" data-lightbox-desc="KLIA Transfer, Pusat Bandar KLCC, Hotel Premium, Pusat Beli-Belah, Event &amp; Pameran, Pelancong &amp; Eksekutif.">
+              <span class="media-card-badge">POSTER RASMI</span>
+              <img src="assets/images/revo-touchpoints-grid.jpg" alt="Visual 6 Titik Sentuhan Penumpang VIP REVO" loading="lazy">
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">TITIK SENTUHAN</span>
+              <h3 class="gallery-item-title">6 Titik Sentuhan Penumpang VIP</h3>
+              <p class="gallery-item-desc">Fotografi sebenar laluan operasi di KLIA, hotel 5-bintang, pusat bandar dan pameran.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-image="assets/images/revo-touchpoints-grid.jpg" data-lightbox-title="Visual 6 Titik Sentuhan Penumpang VIP">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span data-i18n="gallery_zoom_photo">Besarkan Imej</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Image: In-Cabin VIP Experience Poster -->
+          <div class="gallery-item-card" data-category="posters">
+            <div class="gallery-media-thumb" data-lightbox-image="assets/images/revo-in-cabin-passenger.jpg" data-lightbox-title="Pengalaman Kabin Eksekutif &amp; 5 Nilai Utama" data-lightbox-desc="High Visibility, Premium Audience, Targeted Locations, Engaging Format, Real Impact.">
+              <span class="media-card-badge">INFOGRAFIK</span>
+              <img src="assets/images/revo-in-cabin-passenger.jpg" alt="Pengalaman Kabin Eksekutif REVO" loading="lazy">
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">KELEBIHAN REVO</span>
+              <h3 class="gallery-item-title">Kabin Eksekutif &amp; 5 Nilai Utama</h3>
+              <p class="gallery-item-desc">Infografik terperinci pendedahan jenama eksklusif di dalam Alphard &amp; Vellfire.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-image="assets/images/revo-in-cabin-passenger.jpg" data-lightbox-title="Pengalaman Kabin Eksekutif &amp; 5 Nilai Utama">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span data-i18n="gallery_zoom_photo">Besarkan Imej</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Image: Poster Overview -->
+          <div class="gallery-item-card" data-category="posters">
+            <div class="gallery-media-thumb" data-lightbox-image="assets/images/revo-poster-overview.jpg" data-lightbox-title="Poster Ringkasan Rangkaian Media REVO" data-lightbox-desc="Your Brand In Front Of Premium Customers - In-Car Advertising Alphard &amp; Vellfire Only.">
+              <span class="media-card-badge">POSTER RASMI</span>
+              <img src="assets/images/revo-poster-overview.jpg" alt="Poster Ringkasan Rangkaian Media REVO" loading="lazy">
+              <div class="media-play-overlay">
+                <div class="play-circle-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-item-category">RINGKASAN MEDIA</span>
+              <h3 class="gallery-item-title">Ringkasan Rangkaian Media REVO</h3>
+              <p class="gallery-item-desc">Minima 500 prospek secara terus setiap hari merangkumi laluan KLIA, korporat dan pelancong.</p>
+              <div class="gallery-action-row">
+                <button type="button" class="gallery-action-btn" data-lightbox-image="assets/images/revo-poster-overview.jpg" data-lightbox-title="Poster Ringkasan Rangkaian Media REVO">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span data-i18n="gallery_zoom_photo">Besarkan Imej</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="revo-section faq-section" id="faq">
       <div class="revo-container">
         <div class="section-header text-center">
@@ -1387,6 +1878,30 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
         <button type="button" class="btn btn-outline btn-sm" id="modalCloseFooter" data-i18n="modal_close_btn">Tutup</button>
         <a href="<?= e($defaultWaUrl) ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modalWaBtn">
           <span data-i18n="modal_wa_btn">Bincang Format Ini di WhatsApp</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       16. MULTIMEDIA LIGHTBOX MODAL (VIDEO & IMAGE FULLSCREEN)
+       ======================================================================== -->
+  <div class="revo-lightbox" id="mediaLightboxModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <div class="revo-lightbox-dialog">
+      <div class="revo-lightbox-header">
+        <h3 class="revo-lightbox-title" id="lightboxTitle">Media REVO</h3>
+        <button type="button" class="revo-lightbox-close" id="lightboxCloseBtn" aria-label="Tutup">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="revo-lightbox-body" id="lightboxBody">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="revo-lightbox-footer">
+        <span class="revo-lightbox-desc" id="lightboxDesc"></span>
+        <a href="<?= e($defaultWaUrl) ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>Bincang Kempen di WhatsApp</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
