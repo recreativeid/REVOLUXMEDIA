@@ -598,6 +598,94 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // D2. Advantage Section Video Comparison (Plays Directly Inline)
+  const advVideo = document.getElementById('advVideo');
+  const advVideoFrame = document.getElementById('advVideoFrame');
+  const advPlayOverlay = document.getElementById('advPlayOverlay');
+
+  const toggleAdvVideo = () => {
+    if (!advVideo) return;
+    if (advVideo.paused) {
+      advVideo.controls = true;
+      const playPromise = advVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          advPlayOverlay?.classList.add('playing');
+        }).catch(() => {
+          advVideo.controls = true;
+        });
+      }
+    } else {
+      advVideo.pause();
+    }
+  };
+
+  advPlayOverlay?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleAdvVideo();
+  });
+
+  advVideo?.addEventListener('play', () => {
+    advPlayOverlay?.classList.add('playing');
+    advVideo.controls = true;
+  });
+
+  advVideo?.addEventListener('pause', () => {
+    if (advVideo.ended) {
+      advPlayOverlay?.classList.remove('playing');
+      advVideo.controls = false;
+    }
+  });
+
+  advVideo?.addEventListener('ended', () => {
+    advPlayOverlay?.classList.remove('playing');
+    advVideo.controls = false;
+  });
+
+  // D3. Industries Section VIP Boarding Video (Plays Directly Inline)
+  const indVideo = document.getElementById('indVideo');
+  const indVideoBox = document.getElementById('indVideoBox');
+  const indPlayOverlay = document.getElementById('indPlayOverlay');
+
+  const toggleIndVideo = () => {
+    if (!indVideo) return;
+    if (indVideo.paused) {
+      indVideo.controls = true;
+      const playPromise = indVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          indPlayOverlay?.classList.add('playing');
+        }).catch(() => {
+          indVideo.controls = true;
+        });
+      }
+    } else {
+      indVideo.pause();
+    }
+  };
+
+  indPlayOverlay?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleIndVideo();
+  });
+
+  indVideo?.addEventListener('play', () => {
+    indPlayOverlay?.classList.add('playing');
+    indVideo.controls = true;
+  });
+
+  indVideo?.addEventListener('pause', () => {
+    if (indVideo.ended) {
+      indPlayOverlay?.classList.remove('playing');
+      indVideo.controls = false;
+    }
+  });
+
+  indVideo?.addEventListener('ended', () => {
+    indPlayOverlay?.classList.remove('playing');
+    indVideo.controls = false;
+  });
+
   // E. Image Lightbox (Used exclusively for zooming HD Rate Cards & infographics, ZERO video popups)
   const lightboxModal = document.getElementById('mediaLightboxModal');
   const lightboxTitle = document.getElementById('lightboxTitle');

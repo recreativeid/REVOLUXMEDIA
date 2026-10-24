@@ -374,7 +374,34 @@
       exp_doc3_p1: 'Sasaran Minima 500 Prospek terus setiap hari secara konsisten.',
       exp_doc3_p2: 'Audiens disaring: Eksekutif C-Suite, Pelabur & Pelancong Mewah.',
       exp_doc3_p3: 'Format fleksibel: Video, Imej Slaid, Split Screen & QR Interaktif.',
-      exp_doc_zoom: 'Besarkan Dokumen'
+      exp_doc_zoom: 'Besarkan Dokumen',
+
+      // Advantage Section Media Showcase
+      adv_video_tag: 'BUKTI PERBANDINGAN VISUAL',
+      adv_video_title: 'Papan Iklan Lebuhraya Dilihat 2 Saat — Kabin REVO Dilihat 45 Minit Tanpa Gangguan',
+      adv_video_desc: 'Saksikan perbezaan ketara antara memandu laju melintasi billboard di lebuh raya berbanding tontonan santai di kerusi kapten Toyota Alphard dengan peluang mengimbas kod QR serta-merta.',
+      adv_video_hint: 'Klik untuk tonton ujian perbandingan langsung',
+      adv_video_m1: '45 Minit vs 2 Saat',
+      adv_video_m2: '100% Focused Attention',
+      adv_video_m3: 'Zero Visual Clutter',
+
+      // Touchpoints Customer Journey Visual Banner
+      tp_banner_badge: 'DOKUMENTASI FOTOGRAFI SEBENAR',
+      tp_banner_title: 'Liputan Menyeluruh Laluan Korporat & Pelancongan Mewah',
+      tp_banner_desc: 'Fotografi sebenar 6 koridor tumpuan: Ketibaan KLIA, Hab Korporat KLCC, Hotel 5-Bintang, Pusat Beli-Belah Utama, Konvensyen & Delegasi VIP.',
+      tp_banner_hint: 'Klik untuk paparan skrin penuh HD',
+
+      // Industries Media Showcase
+      ind_media_badge: 'PENUMPANG VIP SEBENAR • 21s',
+      ind_media_hint: 'Saksikan profil penumpang menaiki armada',
+      ind_media_title: 'Profil Penumpang: Pembuat Keputusan & HNWIs',
+      ind_media_desc: 'Delegasi perniagaan, usahawan, pelancong antarabangsa dan keluarga berpendapatan tinggi yang kerap menggunakan perkhidmatan pemandu peribadi Alphard & Vellfire.',
+
+      // FAQ Media Card
+      faq_media_badge: 'KONSULTASI PERCUMA & TELUS',
+      faq_media_title: 'Perundingan Strategik Tanpa Sebarang Tekanan',
+      faq_media_desc: 'Kami bersedia mendengar matlamat perniagaan anda dan membantu meneroka pendekatan paling praktikal sebelum anda membuat sebarang komitmen.',
+      faq_media_cta: 'BINCANG DENGAN PENASIHAT KAMI'
     },
 
     id: {
@@ -742,7 +769,34 @@
       exp_doc3_p1: 'Target Minimal 500 Prospek langsung setiap hari secara konsisten.',
       exp_doc3_p2: 'Audiens tersaring: Eksekutif C-Suite, Investor & Turis Mewah.',
       exp_doc3_p3: 'Format fleksibel: Video, Slide Gambar, Split Screen & QR Interaktif.',
-      exp_doc_zoom: 'Perbesar Dokumen'
+      exp_doc_zoom: 'Perbesar Dokumen',
+
+      // Advantage Section Media Showcase
+      adv_video_tag: 'BUKTI PERBANDINGAN VISUAL',
+      adv_video_title: 'Papan Iklan Jalan Tol Dilihat 2 Detik — Kabin REVO Dilihat 45 Menit Tanpa Gangguan',
+      adv_video_desc: 'Saksikan perbedaan nyata antara melaju cepat melewati billboard di jalan tol dibanding menonton santai di kursi kapten Toyota Alphard dengan kesempatan memindai kode QR seketika.',
+      adv_video_hint: 'Klik untuk putar uji perbandingan langsung',
+      adv_video_m1: '45 Menit vs 2 Detik',
+      adv_video_m2: '100% Focused Attention',
+      adv_video_m3: 'Zero Distraksi Visual',
+
+      // Touchpoints Customer Journey Visual Banner
+      tp_banner_badge: 'DOKUMENTASI FOTOGRAFI NYATA',
+      tp_banner_title: 'Jangkauan Menyeluruh Rute Korporat & Wisata Mewah',
+      tp_banner_desc: 'Dokumentasi fotografi nyata 6 koridor utama: Kedatangan KLIA, Pusat Bisnis KLCC, Hotel Bintang-5, Pusat Perbelanjaan Premium, Konvensi & Delegasi VIP.',
+      tp_banner_hint: 'Klik untuk tampilan layar penuh HD',
+
+      // Industries Media Showcase
+      ind_media_badge: 'PENUMPANG VIP NYATA • 21s',
+      ind_media_hint: 'Saksikan profil penumpang menaiki armada',
+      ind_media_title: 'Profil Penumpang: Pengambil Keputusan & HNWIs',
+      ind_media_desc: 'Delegasi bisnis, pengusaha, wisatawan internasional, dan keluarga berpenghasilan tinggi yang rutin menggunakan layanan pengemudi pribadi Alphard & Vellfire.',
+
+      // FAQ Media Card
+      faq_media_badge: 'KONSULTASI GRATIS & TRANSPARAN',
+      faq_media_title: 'Konsultasi Strategis Tanpa Tekanan',
+      faq_media_desc: 'Kami siap mendengarkan tujuan bisnis Anda dan membantu merancang pendekatan paling tepat sebelum Anda membuat komitmen apa pun.',
+      faq_media_cta: 'KONSULTASI DENGAN PENASIHAT KAMI'
     }
   };
 
