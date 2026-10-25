@@ -295,15 +295,9 @@ $newEnquiriesCount = count(array_filter($enquiries, function($e) {
   <header class="admin-header-bar">
     <div class="revo-container" style="display: flex; align-items: center; justify-content: space-between;">
       <div style="display: flex; align-items: center; gap: 12px;">
-        <div class="brand-emblem" style="width: 32px; height: 32px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width: 16px; height: 16px;">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-            <polyline points="2 17 12 22 22 17"></polyline>
-            <polyline points="2 12 12 17 22 12"></polyline>
-          </svg>
-        </div>
+        <img src="../assets/images/revo-logo.png" alt="REVO" style="height: 32px; width: auto; display: block;">
         <div>
-          <span style="font-weight: 700; color: #FFF; font-size: 1rem; letter-spacing: 0.05em;">REVO LUX</span>
+          <span style="font-weight: 700; color: #FFF; font-size: 1rem; letter-spacing: 0.05em;">REVO <span style="color: #C9A45C;">LUX</span> MEDIA</span>
           <span style="font-size: 0.75rem; color: #C9A45C; margin-left: 6px;">Portal Pengurusan</span>
         </div>
       </div>
