@@ -294,11 +294,12 @@ $newEnquiriesCount = count(array_filter($enquiries, function($e) {
   <!-- Top Bar -->
   <header class="admin-header-bar">
     <div class="revo-container" style="display: flex; align-items: center; justify-content: space-between;">
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <img src="../assets/images/revo-logo.png" alt="REVO" style="height: 32px; width: auto; display: block;">
-        <div>
-          <span style="font-weight: 700; color: #FFF; font-size: 1rem; letter-spacing: 0.05em;">REVO <span style="color: #C9A45C;">LUX</span> MEDIA</span>
-          <span style="font-size: 0.75rem; color: #C9A45C; margin-left: 6px;">Portal Pengurusan</span>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="../assets/images/revo-logo.png" alt="REVO" style="height: 28px; width: auto; display: block;">
+        <span class="brand-divider" style="height: 18px;" aria-hidden="true"></span>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-weight: 700; color: #FFF; font-size: 0.98rem; letter-spacing: 0.05em;">REVO <span style="color: #C9A45C;">LUX</span> MEDIA</span>
+          <span style="font-size: 0.72rem; color: #C9A45C; background: rgba(201,164,92,0.12); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(201,164,92,0.3);">Portal Pengurusan</span>
         </div>
       </div>
 

@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <div class="admin-login-card">
     <div class="login-brand">
-      <img src="../assets/images/revo-logo.png" alt="REVO Logo" style="height: 48px; width: auto; margin: 0 auto 14px auto; display: block;">
+      <img src="../assets/images/revo-logo.png" alt="REVO Logo" style="height: 38px; width: auto; margin: 0 auto 14px auto; display: block;">
       <div class="login-title">REVO LUX MEDIA</div>
       <div class="login-subtitle">Administrator Management Portal</div>
     </div>
