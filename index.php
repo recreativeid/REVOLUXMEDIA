@@ -62,7 +62,7 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
 </head>
 <body>
 
@@ -635,15 +635,15 @@ if (!in_array($currentLang, ['ms', 'id'], true)) {
 
         <!-- Live In-Cabin Campaign Proof (PERKESO Live Footage) -->
         <div class="solutions-showcase-box">
-          <div>
+          <div class="solutions-showcase-info">
             <div class="section-tag" data-i18n="sol_live_proof_badge">SIARAN KEMPEN AKTIF</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--c-white); margin-bottom: 10px;" data-i18n="sol_live_proof_title">
+            <h3 class="solutions-showcase-title" data-i18n="sol_live_proof_title">
               Bukti Siaran Kempen Sebenar Di Dalam Kabin
             </h3>
-            <p style="font-size: 0.885rem; color: var(--c-silver); line-height: 1.6; margin-bottom: var(--space-md);" data-i18n="sol_live_proof_desc">
+            <p class="solutions-showcase-desc" data-i18n="sol_live_proof_desc">
               Saksikan bagaimana kempen rakan korporat dan agensi seperti PERKESO disiarkan secara dinamik di skrin resolusi tinggi Toyota Alphard REVO.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--space-sm);">
+            <div class="solutions-showcase-actions">
               <button type="button" class="btn btn-primary btn-sm" id="solutionsPlayBtn">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 <span>PUTAR LANGSUNG DI TABLET</span>
